@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/nosotros.css">
+        <title>Urban & Shop</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jomhuria&family=Lusitana&display=swap" rel="stylesheet">
+    </head>
+<body>
+    
+    <header class="marquesina">
+        <div class="ticker">
+          COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN  
+        </div>
+      </header>
+     
+      <!-- Barra de navegación -->
+      <nav class="nav-bar">
+        <img src="img/logoUrbanShop.png" alt="Logo Urban&Shop" class="logo-img">
+        <div class="logo"></div>
+        <ul class="nav-links">
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">SOBRE NOSOTROS</a></li>
+          <li><a href="#">ÚLTIMA MODA</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">CONTÁCTANOS</a></li>
+        </ul>
+       
+        <div class="carrito" onclick="mostrarCarrito()">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </nav>
+       
+       
+        <!-- Modal del Carrito -->
+        <div id="modalCarrito" class="modal-carrito">
+          <div class="contenido-carrito">
+            <span class="close-btn" onclick="cerrarCarrito()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="carrito-items"></div>
+            <hr>
+            <div id="carrito-resumen">
+              <p>Subtotal: <span id="subtotal">$0</span></p>
+              <p>Total: <span id="total">$0</span></p>
+              <button class="btn-finalizar">Finalizar Compra</button>
+            </div>
+          </div>
+        </div>
+        <div class="overlay"></div>
+    <section class="banner">
+        <div class="banner-content">
+            <h1>REVOLUCIONA TU ARMARIO  </h1>
+            <h2>CON MODA SOSTENIBLE</h2>
+            <p>URBAN & SHOP</p>
+        </div>
+        <div class="banner-image">
+            <img src="../images/banner-image2.png" alt="Imagen del Banner"> 
+        </div>
+    </section>
+    <section class="seccion-nuestra-historia">
+        <div class="contenido-nuestra-historia">
+            <h2>NUESTRA HISTORIA</h2>
+            <p>
+                Nuestra pasión por la moda y la sostenibilidad nos llevó a crear una tienda online que fusiona la creatividad con la conciencia ecológica. Comenzamos con la idea de que la moda puede ser más responsable y con propósito, y hoy ofrecemos colecciones hechas con ropa reciclada que ha sido cuidadosamente transformada para darle una segunda oportunidad.. Cada creación es irrepetible, hecha con materiales reciclados que redefinen lo urbano y responsable. No sigas modas, crea tu propio estilo con impacto.</p>
+            
+            <button class="boton-ver-mas">QUIERO VER MAS</button>
+        </div>
+        <div class="imagen-nuestra-historia">
+            <img src="../images/image-historia.png" alt="Modelo-mujer-gris">
+        </div>
+    </section>
+    <section class="moda-expresion">
+        <h2>MAS QUE UNA MODA, UNA FORMA DE EXPRESION</h2>
+        <p>La moda es más que seguir tendencias; es la manera en que nos presentamos al mundo, una declaración silenciosa de quiénes somos. Cada prenda, cada combinación, cuenta una historia única. No se trata solo de vestirse, sino de expresarse. A través de los colores, las texturas y los estilos, podemos comunicar nuestra esencia, emociones y creencias. Porque la moda no es solo algo que se lleva puesto, es lo que dice de ti sin necesidad de palabras. Viste lo que eres, expresa lo que sientes y deja que tu estilo hable por ti.</p>
+        <div class="galeria-imagenes">
+            <div class="columna-imagenes">
+                <img src="../images/img-expresion.png" alt="Imagen 1">
+                <img src="../images/img-expresion2.png" alt="Imagen 2">
+                <img src="../images/img-expresion3.png" alt="Imagen 3">
+            </div>
+        </div>
+        <div class="botton-ver">
+            <button class="boton-ver-mas">QUIERO VER MAS</button>
+        </div>
+    </section>
+    <section class="nuestros-valores">
+        <h2>NUESTROS VALORES</h2>
+        <p>Nuestra pasión es fusionar la moda urbana con la sostenibilidad, dando una segunda vida a prendas únicas que reflejan la individualidad y el compromiso con el planeta; nos esforzamos por la calidad y la creatividad en cada pieza, fomentando una comunidad consciente e innovando constantemente para reducir el impacto ambiental, invitándote a unirte a un estilo con propósito.</p>
+        <div class="vision-mision">
+            <div class="vision">
+                <h3>VISION</h3>
+                <p>Transformar prendas olvidadas en piezas únicas y llenas de vida, inspirando a nuestros clientes a expresar su individualidad a través de la moda sostenible. Promovemos el consumo consciente y responsable, reduciendo el impacto ambiental de la industria textil y creando una comunidad de personas que valoran la creatividad y la autenticidad.</p>
+            </div>
+            <div class="mision">
+                <h3>MISION</h3>
+                <p>Ser la marca líder en moda urbana reciclada, reconocida por nuestra creatividad, calidad y compromiso con el planeta. Aspiramos a ser un referente en la industria, demostrando que la moda sostenible puede ser innovadora, accesible y reflejar el estilo único de cada persona.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="logo-footer">
+                    <img src="../images/Logo.png" alt="" class="image-logo">
+                </div>
+                <p>La moda puede cambiar el mundo. En URBAN&SHOP creemos en un futuro más sostenible. Cada prenda que creamos es una declaración de amor por el planeta y por la moda.</p>
+            </div>
+            <div class="footer-column style">
+                <h3>CONTACTÁNOS</h3>
+                <p>urbanshop@informacion.com</p>
+                <p>+57 3158154139</p>
+                <p>cra 28 # 17 - 75, Bogota</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-column  style">
+                <h3>MENU</h3>
+                <p>INICIO</p>
+                <p>QUIENES SOMOS</p>
+                <p>ULTIMO EN MODA</p>
+                <p>BLOG</p>
+                <p>CONTACTANOS</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 URBAN&SHOP COPYRIGHT
+        </div>
+    </footer>
+    <script src="../dist/" defer></script>
+    <script src="https://kit.fontawesome.com/a0fe0f97f9.js" crossorigin="anonymous"></script>
+</body>
+</html>

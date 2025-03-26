@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+}
+
+/* Marquesina */
+.marquesina {
+    background-color:#0D8BB9;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 35px;
+    letter-spacing: 20px;
+}
+
+
+.marquesina p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 45s linear infinite;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.imagen{
+    width: 30%;
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+/* Navbar */
+.imagen{
+    width: 50%;
+}
+.nav-bar {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+    position: relative;
+  }
+  nav a.active {
+    background-color: #0D8BB9;
+    color: #000000;
+}
+ 
+  .logo-img {
+    height: 40px;
+    margin-right: 15px;
+   
+  }
+ 
+  .logo {
+    font-family: 'Lusitana', serif;
+    font-size: 28px;
+    color: white;
+    width: 250px;
+    text-align: center;
+  }
+ 
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Jomhuria', cursive;
+    font-size: 40px;
+    transition: color 0.3s;
+    font-weight: 100;
+  }
+ 
+  .nav-links li a:hover {
+    color: #0D8BB9;
+  }
+ 
+  .carrito {
+    font-size: 30px;
+    color: white;
+    margin-left: 40px;
+    cursor: pointer;
+    text-align: center;
+  }
+  /* Estilos para el menú de hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-elements {
+    display: flex;
+    align-items: center;
+}
+/* Seccion banner */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+    overflow: hidden; /* Para ocultar el desbordamiento del romboide */
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.banner-content {
+    flex: 1;
+    color: #FFFFFF;
+}
+
+.banner-content h1 {
+    font-family: 'Jomhuria', cursive;
+    font-size: 90px;
+    font-weight: 100;
+    margin-bottom: -20px;
+    text-align: start;
+}
+.banner-content h2{
+    font-family: 'Jomhuria', cursive;
+    font-size: 90px;
+    font-weight: 100;
+    margin-bottom: -20px;
+    text-align: end;
+}
+
+
+.banner-content p {
+    font-family: 'Lusitana', serif;
+    font-size: 25px;
+    letter-spacing: 30px;
+    text-align: end;
+
+}
+
+.banner-image {
+    flex: 1;
+    text-align: right;
+}
+
+.banner-image img {
+    width: 400px;
+    height: 500px;
+}
+
+/* Franja Azul */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -45%; /* Ajusta para que el romboide comience fuera de la pantalla */
+    width:200%; /* Ajusta para que el romboide cubra todo el banner */
+    height: 100%;
+    background-color: #0D8BB9;
+    transform: skew(-82deg);
+    z-index: -1;
+}
+
+/* Seccion nuestra historia */
+
+.seccion-nuestra-historia {
+  
+ 
+    background-blend-mode: multiply;
+    background-image: url('../images/fondo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* O 'cover' si quieres que cubra toda la sección */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    height: auto; 
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.contenido-nuestra-historia {
+    display: flex;
+    text-align: center;
+    width: 50%;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    background-size: 60% auto; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 590px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+}
+
+.contenido-nuestra-historia h2 {
+    font-family: 'Bungee Inline', cursive;
+    font-weight: normal;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contenido-nuestra-historia p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: "Instrument Sans", sans-serif;
+    
+}
+
+.boton-ver-mas {
+    width: 90%;
+    height: 60px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.boton-ver-mas:hover {
+    transform: scale(1.05);
+}
+
+.imagen-nuestra-historia {
+  
+    text-align: center;
+}
+
+.imagen-nuestra-historia img {
+    width: 100%;
+    height: 630px;
+}
+
+/* Seccion moda expresion */
+.moda-expresion {
+    text-align: center;
+    padding: 50px;
+    color: #FFFFFF;
+}
+
+.moda-expresion h2 {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.moda-expresion p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+
+.columna-imagenes {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.columna-imagenes img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.imagen-destacada {
+    width: 65%;
+}
+
+.imagen-destacada img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.boton-ver-mas {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 45%;
+}
+.botton-ver{
+    margin: 40px;
+}
+
+.boton-ver-mas:hover {
+    transform: scale(1.05);
+}
+
+/* seccion nuestros valores */
+
+.nuestros-valores {
+    text-align: center;
+    padding: 50px;
+    background-image: url('../images/imagen-robot-fondo.png');  /* Reemplaza con tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    background-size: contain; /* O background-size: cover; o background-size: auto; */
+    background-position: center;
+    border-bottom: solid 2px white;
+    min-height: 500px; /* O height: 100vh; o height: 800px; */
+}
+
+.nuestros-valores h2 {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 2em;
+    margin-bottom: 30px;
+    z-index: 1; /* Asegura que el texto esté encima de la capa */
+}
+
+.nuestros-valores p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    z-index: 1; /* Asegura que el texto esté encima de la capa */
+}
+
+.vision-mision {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 80px;
+}
+
+.vision, .mision {
+    display: flex;
+    width: 30%;
+    height: 560px;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.vision:hover, .mision:hover {
+    transform: scale(1.03);
+}
+
+.vision h3, .mision h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Fondos para VISION y MISION (reemplaza con tus imágenes) */
+.vision { background-image: url('../images/img-valores1.png'); }
+.mision { background-image: url('../images/img-valores2.png'); }
+
+
+/* diseño footer*/
+
+footer {
+    background-color: #000000;
+    border-top: 1px solid #FFFFFF;
+    padding: 50px 20px;
+    color: #FFFFFF;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 30px;
+    
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h3 {
+    text-align: center;
+    font-family: 'Bungee Inline', cursive;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.logo {
+    
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 25px;
+}
+
+.fab{
+    color: white;
+    font-size: 45px;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+.style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-logo{
+    width:50%;
+}
