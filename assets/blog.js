@@ -3,33 +3,37 @@ const gruposDeslizamiento = document.querySelectorAll('.grupo-deslizamiento-3d')
 const numGrupos = gruposDeslizamiento.length;
 let indiceActual = 0;
 const intervalo = 3000; // Cambia cada 3 segundos
-const likeButton = document.querySelector('.like-button');
-const likeCount = document.querySelector('.like-count');
-const commentButton = document.querySelector('.comment-button');
-const commentsSection = document.querySelector('.comments-section');
-const commentList = document.querySelector('.comment-list');
-const commentInput = document.querySelector('.comment-input');
-const submitComment = document.querySelector('.submit-comment');
+const blogPosts = document.querySelectorAll('.blog-post'); // Selecciona todos los artículos
 
-let likes = parseInt(likeCount.textContent);
+blogPosts.forEach(post => {
+  const likeButton = post.querySelector('.like-button');
+  const likeCount = post.querySelector('.like-count');
+  const commentButton = post.querySelector('.comment-button');
+  const commentsSection = post.querySelector('.comments-section');
+  const commentList = post.querySelector('.comment-list');
+  const commentInput = post.querySelector('.comment-input');
+  const submitComment = post.querySelector('.submit-comment');
 
-likeButton.addEventListener('click', () => {
-  likes++;
-  likeCount.textContent = likes;
-});
+  let likes = parseInt(likeCount.textContent);
 
-commentButton.addEventListener('click', () => {
-  commentsSection.style.display = commentsSection.style.display === 'none' ? 'block' : 'none';
-});
+  likeButton.addEventListener('click', () => {
+    likes++;
+    likeCount.textContent = likes;
+  });
 
-submitComment.addEventListener('click', () => {
-  const commentText = commentInput.value.trim();
-  if (commentText) {
-    const newComment = document.createElement('li');
-    newComment.textContent = commentText;
-    commentList.appendChild(newComment);
-    commentInput.value = '';
-  }
+  commentButton.addEventListener('click', () => {
+    commentsSection.style.display = commentsSection.style.display === 'none' ? 'block' : 'none';
+  });
+
+  submitComment.addEventListener('click', () => {
+    const commentText = commentInput.value.trim();
+    if (commentText) {
+      const newComment = document.createElement('li');
+      newComment.textContent = commentText;
+      commentList.appendChild(newComment);
+      commentInput.value = '';
+    }
+  });
 });
 
 function desplazarCarrusel(reset = false) {

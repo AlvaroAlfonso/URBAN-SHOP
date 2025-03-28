@@ -228,15 +228,13 @@ body {
 
 
 .corazon {
-    border:solid red 2px;
+    color: red;
     border-radius: 300px;
-    background-color: #c7c7c7c9;
     padding: 5px;
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 1.5em;
-    color: rgb(255, 255, 255); /* Color inicial del corazón */
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para la animación */
 }
