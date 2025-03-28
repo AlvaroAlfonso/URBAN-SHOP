@@ -1,1 +1,245 @@
-html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Urban & Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jomhuria&family=Lusitana&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="marquesina">
+        <div class="ticker">COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN </div>
+
+     
+      <!-- Barra de navegación -->
+      <nav class="nav-bar">
+        <img src="/images/Logo.png" alt="Logo Urban&Shop" class="logo-img">
+        <div class="logo"></div>
+        <ul class="nav-links">
+          <li><a href="/index.html" >INICIO</a></li>
+          <li><a href="/pages/nosotros.html">SOBRE NOSOTROS</a></li>
+          <li><a href="#">ÚLTIMA MODA</a></li>
+          <li><a href="/pages/blog.html" class="contact-button">BLOG</a></li>
+          <li><a href="" >CONTÁCTANOS</a></li>
+        </ul>
+       
+        <div class="carrito" onclick="mostrarCarrito()">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>ELEGANCIA & ESENCIA</h1>
+            <p>URBAN & SHOP</p>
+        </div>
+        <div class="banner-image">
+            <img src="../images/banner-image3.png" alt="Imagen del Banner"> 
+        </div>
+    </section>
+    <main>
+        <article class="blog-post">
+            <div class="post-meta">
+                <span class="fecha">Publicado el 15 de noviembre de 2023</span>
+                <span class="autor">Por Alvaro Andres Alfonso Rodriguez</span>
+            </div>
+            <h2 class="titulo">MODA URBANA CON HISTORIA</h2>
+            
+            <p class="texto">La moda urbana no solo se trata de estilo, sino también de transformación. En un mundo donde la ropa tiene una segunda oportunidad, el denim se convierte en el lienzo perfecto para reinventar prendas únicas y con carácter.</p>
+            <section class="video-section">
+                    <video class="responsive-video" muted autoplay loop playsinline controls>
+                    <source src="../images/Spot publicitario para marca de ropa _ Lowanna.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </section>
+            <div class="post-actions">
+                <button class="like-button">Me gusta (<span class="like-count">0</span>)</button>
+                <button class="comment-button">Comentarios</button>
+            </div>
+            <div class="comments-section">
+                <h3>Comentarios</h3>
+                <ul class="comment-list">
+                    </ul>
+                <textarea class="comment-input" placeholder="Escribe un comentario..."></textarea>
+                <button class="submit-comment">Enviar comentario</button>
+            </div>
+        </article>
+
+        <article class="blog-post">
+        <div class="post-meta">
+            <span class="fecha">Publicado el 15 de noviembre de 2023</span>
+            <span class="autor">Por Paula Malaver Gomez</span>
+        </div>
+        <div class="art-magiaReciclado">
+            <div class="imagen-margia-reciclado">
+                <img src="../images/blog1.png" alt="blog-article">
+            </div>
+            <div class="contenido-margia-reciclado">
+                <h3>La Magia del Denim Reciclado</h3>
+                <p>El look que ves en la imagen es un claro ejemplo de cómo la creatividad y la sostenibilidad pueden fusionarse en una prenda de impacto. Este conjunto, elaborado a partir de piezas de mezclilla reciclada, demuestra que la moda puede ser disruptiva sin perder su esencia urbana.
+                    Cada pieza —el bucket hat, el corset y el bolso— cuenta una historia. Los retazos de diferentes tonos de mezclilla reflejan el paso del tiempo y le dan un aire vintage y rebelde, perfecto para quienes buscan destacar con un estilo auténtico.</p>
+            </div>
+        </div>
+        <div class="post-actions">
+                <button class="like-button">Me gusta (<span class="like-count">0</span>)</button>
+                <button class="comment-button">Comentarios</button>
+        </div>
+        <div class="comments-section">
+            <h3>Comentarios</h3>
+            <ul class="comment-list">
+                </ul>
+            <textarea class="comment-input" placeholder="Escribe un comentario..."></textarea>
+            <button class="submit-comment">Enviar comentario</button>
+        </div>
+        </article>
+        <article class="blog-post">
+            <div class="post-meta">
+                <span class="fecha">Publicado el 15 de noviembre de 2023</span>
+                <span class="autor">Por Paula Malaver Gomez</span>
+            </div>
+            <div class="contenedor-seccion">
+                <div class="contenido-moda-urbana">
+                    <h3>Moda Urbana con Propósito</h3>
+                    <p class="texto-principal">
+                        Este tipo de diseños no solo son una tendencia, sino un movimiento. En lugar de producir en masa, 
+                        el enfoque se centra en la reutilización de materiales, creando piezas exclusivas y con una 
+                        personalidad única.
+                    </p>
+                    <div class="text-secundario">
+                        <p>💥 Reduce el impacto ambiental</p>
+                        <p>💥 Da una nueva vida a prendas olvidadas necesito solo 2 texto</p>
+                        <p>💥 Ofrece un estilo exclusivo e irrepetible.</p>
+                    </div>
+                    
+                </div>
+                <div class="contenedor-deslizador-3d">
+                    <div class="pista-deslizamiento-3d">
+                      <div class="grupo-deslizamiento-3d">
+                        <img src="../images/Rectangle-139.png" alt="Moda reciclable urbana 1" class="imagen-deslizamiento-3d">
+                      </div>
+                      <div class="grupo-deslizamiento-3d">
+                        <img src="../images/Rectangle-140.png" alt="Moda reciclable urbana 2" class="imagen-deslizamiento-3d">
+                      </div>
+                      <div class="grupo-deslizamiento-3d">
+                        <img src="../images/Rectangle-141.png" alt="Moda reciclable urbana 3" class="imagen-deslizamiento-3d">
+                      </div>
+                      <div class="grupo-deslizamiento-3d">
+                        <img src="../images/Rectangle-142.png" alt="Moda reciclable urbana 4" class="imagen-deslizamiento-3d">
+                      </div>
+                      <div class="grupo-deslizamiento-3d">
+                        <img src="../images/Rectangle-143.png" alt="Moda reciclable urbana 5" class="imagen-deslizamiento-3d">
+                      </div>
+                      <div class="grupo-deslizamiento-3d">
+                        <img src="../images/Rectangle-144.png" alt="Moda reciclable urbana 6" class="imagen-deslizamiento-3d">
+                      </div>
+                      <div class="grupo-deslizamiento-3d">
+                        <img src="../images/Rectangle-145.png" alt="Moda reciclable urbana 7" class="imagen-deslizamiento-3d">
+                      </div>
+                      <div class="grupo-deslizamiento-3d">
+                        <img src="../images/Rectangle-146.png" alt="Moda reciclable urbana 8" class="imagen-deslizamiento-3d">
+                      </div>
+                      <div class="grupo-deslizamiento-3d">
+                        <img src="../images/Rectangle-147.png" alt="Moda reciclable urbana 9" class="imagen-deslizamiento-3d">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="post-actions">
+                <button class="like-button">Me gusta (<span class="like-count">0</span>)</button>
+                <button class="comment-button">Comentarios</button>
+            </div>
+            <div class="comments-section">
+                <h3>Comentarios</h3>
+                <ul class="comment-list">
+                    </ul>
+                <textarea class="comment-input" placeholder="Escribe un comentario..."></textarea>
+                <button class="submit-comment">Enviar comentario</button>
+            </div>
+        </div>
+        </article>
+        <article class="blog-post imagen-seccion">
+            <div class="post-meta">
+                <span class="fecha">Publicado el 15 de noviembre de 2023</span>
+                <span class="autor">Por Alvaro Andres Alfonso Rodriguez</span>
+            </div>
+            
+            <div class="contenedor-modaurban">
+                <div class="contenedor-blog">
+                    <h2 class="titulo">Moda Urbana Con Actitud</h2>
+                    <p class="texto">La moda urbana siempre ha sido sinónimo de creatividad y reinvención. Este diseño de 
+                        falda asimétrica y corset con estrellas demuestra que la mezclilla puede transformarse en 
+                        una pieza única y atrevida.
+                    </p>
+                </div>
+                <div class="art-magiaReciclado">
+                    <div class="imagen-margia-reciclado">
+                        <img src="../images/blog2.png" alt="es un blog">
+                    </div>
+                    <div class="contenido-margia-reciclado">
+                        <p> Este conjunto reinterpreta el clásico denim con cortes agresivos, detalles asimétricos y texturas en contraste. 
+                            La falda, creada a partir de un pantalón reciclado, juega con el equilibrio entre lo rudo y lo chic, mientras que 
+                            el corset con picos y estrellas añade una estética futurista y rebelde.
+                            Cada costura y cada corte imperfecto cuentan una historia. La mezcla de denim en diferentes lavados y el logotipo 
+                            impreso en la falda refuerzan un aire streetwear auténtico, ideal para quienes buscan un look con personalidad. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-actions">
+                <button class="like-button">Me gusta (<span class="like-count">0</span>)</button>
+                <button class="comment-button">Comentarios</button>
+            </div>
+            <div class="comments-section">
+                <h3>Comentarios</h3>
+                <ul class="comment-list">
+                    </ul>
+                <textarea class="comment-input" placeholder="Escribe un comentario..."></textarea>
+                <button class="submit-comment">Enviar comentario</button>
+            </div>
+        </article>
+    </main>
+    <div class="lema-final">
+        <h3> 🔥 El estilo no espera. ¿Listo para destacar? Compra ahora y hazlo tuyo. 🔥</h3>
+        <button class="boton-ver-mas">COMPRAR AHORA</button>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="logo-footer">
+                    <img src="../images/Logo.png" alt="" class="image-logo">
+                </div>
+                <p>La moda puede cambiar el mundo. En URBAN&SHOP creemos en un futuro más sostenible. Cada prenda que creamos es una declaración de amor por el planeta y por la moda.</p>
+            </div>
+            <div class="footer-column style">
+                <h3>CONTACTÁNOS</h3>
+                <p>urbanshop@informacion.com</p>
+                <p>+57 3158154139</p>
+                <p>cra 28 # 17 - 75, Bogota</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-column  style">
+                <h3>MENU</h3>
+                <p>INICIO</p>
+                <p>QUIENES SOMOS</p>
+                <p>ULTIMO EN MODA</p>
+                <p>BLOG</p>
+                <p>CONTACTANOS</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 URBAN&SHOP COPYRIGHT
+        </div>
+    </footer>
+    <script src="../assets/blog.js"></script> 
+</body>
+</html>

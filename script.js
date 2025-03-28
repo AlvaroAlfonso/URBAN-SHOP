@@ -8,15 +8,6 @@ menuToggle.addEventListener('click', () => {
 });
 
 
-
-// Cerrar el menú al hacer clic fuera de él
-document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-        navLinks.classList.remove('active');
-    }
-});
-
-
 botonVerMas.addEventListener('mouseout', () => {
     botonVerMas.style.transform = 'scale(1)';
 });

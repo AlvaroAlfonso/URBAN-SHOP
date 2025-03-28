@@ -10,76 +10,58 @@ body {
     padding: 0;
     font-family: 'Inter', sans-serif;
     background-color: #000000;
+    color: #ffffff;
 }
 
 /* Marquesina */
 .marquesina {
-    background-color:#0D8BB9;
+    background-color: #0D8BB9;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-    padding: 35px;
-    letter-spacing: 20px;
-}
-
-
-.marquesina p {
+    letter-spacing: 2px;
+  }
+ 
+  .ticker {
     display: inline-block;
-    padding-left: 100%;
-    animation: marquee 45s linear infinite;
-    font-size: 16px;
-    color: #ffffff;
+    padding: 10px;
+    animation: ticker-scroll 30s linear infinite;
+    font-size: 14px;
+  }
+
+.contact-button{
+    background-color: #0D8BB9;
+    padding: 10px;
 }
 
-.imagen{
-    width: 30%;
-}
-
-
-@keyframes marquee {
+  @keyframes ticker-scroll {
     0% {
-        transform: translate(0, 0);
+      transform: translateX(100%);
     }
     100% {
-        transform: translate(-100%, 0);
+      transform: translateX(-100%);
     }
-}
-
-/* Header */
-header {
-    background-color: #000000;
-    border-bottom: 1px solid #FFFFFF;
-}
-
+  }
+ 
 /* Navbar */
-.imagen{
-    width: 50%;
-}
 .nav-bar {
     background-color: #000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 30px;
+    padding: 15px 30px;
     position: relative;
   }
-  nav a.active {
-    background-color: #0D8BB9;
-    color: #000000;
-}
  
   .logo-img {
-    height: 40px;
+    width: 7%;
     margin-right: 15px;
-   
   }
  
   .logo {
     font-family: 'Lusitana', serif;
     font-size: 28px;
     color: white;
-    width: 250px;
-    text-align: center;
   }
  
   .nav-links {
@@ -94,9 +76,8 @@ header {
     color: white;
     text-decoration: none;
     font-family: 'Jomhuria', cursive;
-    font-size: 40px;
+    font-size: 24px;
     transition: color 0.3s;
-    font-weight: 100;
   }
  
   .nav-links li a:hover {
@@ -104,24 +85,13 @@ header {
   }
  
   .carrito {
-    font-size: 30px;
+    font-size: 20px;
     color: white;
-    margin-left: 40px;
     cursor: pointer;
-    text-align: center;
   }
-  /* Estilos para el menú de hamburguesa */
-.menu-toggle {
-    display: none; /* Oculto por defecto en pantallas grandes */
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-}
+ 
 
-.nav-elements {
-    display: flex;
-    align-items: center;
-}
+ 
 /* Seccion banner */
 .banner {
     display: flex;
@@ -140,19 +110,10 @@ header {
 
 .banner-content h1 {
     font-family: 'Jomhuria', cursive;
-    font-size: 90px;
+    font-size: 120px;
     font-weight: 100;
     margin-bottom: -20px;
-    text-align: start;
 }
-.banner-content h2{
-    font-family: 'Jomhuria', cursive;
-    font-size: 90px;
-    font-weight: 100;
-    margin-bottom: -20px;
-    text-align: end;
-}
-
 
 .banner-content p {
     font-family: 'Lusitana', serif;
@@ -177,8 +138,8 @@ header {
     content: '';
     position: absolute;
     top: 0;
-    left: -45%; /* Ajusta para que el romboide comience fuera de la pantalla */
-    width:200%; /* Ajusta para que el romboide cubra todo el banner */
+    left: -20%; /* Ajusta para que el romboide comience fuera de la pantalla */
+    width:180%; /* Ajusta para que el romboide cubra todo el banner */
     height: 100%;
     background-color: #0D8BB9;
     transform: skew(-82deg);
@@ -366,8 +327,7 @@ header {
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.781);
     transition: transform 0.3s ease;
     flex-direction: column;
     align-items: center;

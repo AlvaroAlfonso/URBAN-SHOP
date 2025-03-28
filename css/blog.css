@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+/* Header */
+/* Marquesina ticker */
+.marquesina {
+    background-color: #0D8BB9;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    letter-spacing: 2px;
+  }
+ 
+  .ticker {
+    display: inline-block;
+    padding: 10px;
+    animation: ticker-scroll 30s linear infinite;
+    font-size: 14px;
+  }
+ 
+  .contact-button{
+    background-color: #0D8BB9;
+    padding: 10px;
+}
+
+   
+  @keyframes ticker-scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+ 
+  /* Navbar */
+  .nav-bar {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    position: relative;
+  }
+ 
+  .logo-img {
+    width: 7%;
+    margin-right: 15px;
+  }
+ 
+  .logo {
+    font-family: 'Lusitana', serif;
+    font-size: 28px;
+    color: white;
+  }
+ 
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Jomhuria', cursive;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+ 
+  .nav-links li a:hover {
+    color: #0D8BB9;
+  }
+ 
+  .carrito {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+ 
+/*Banner estilos*/
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+    overflow: hidden; /* Para ocultar el desbordamiento del romboide */
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.banner-content {
+    flex: 1;
+    color: #FFFFFF;
+}
+
+.banner-content h1 {
+    font-family: 'Jomhuria', cursive;
+    font-size: 120px;
+    font-weight: 100;
+    margin-bottom: -20px;
+}
+
+
+.banner-content p {
+    font-family: 'Lusitana', serif;
+    font-size: 25px;
+    letter-spacing: 30px;
+    text-align: end;
+
+}
+
+.banner-image {
+    flex: 1;
+    text-align: right;
+}
+
+.banner-image img {
+    width: 400px;
+    height: 500px;
+}
+
+/* Franja Azul */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20%; /* Ajusta para que el romboide comience fuera de la pantalla */
+    width:180%; /* Ajusta para que el romboide cubra todo el banner */
+    height: 100%;
+    background-color: #0D8BB9;
+    transform: skew(-82deg);
+    z-index: -1;
+}
+
+/* SECCCION MODA HISTORIA*/
+
+.titulo{
+    font-family: 'Buenard';
+    font-family: 'Bungee Inline', cursive;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.texto{
+    font-family: system-ui;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    margin: 20px 50px 30px;
+}
+
+.blog-post {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: end;
+  margin-left: 40px;
+  width: 90%;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.titulo {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.post-meta {
+  font-size: 0.9em;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.texto {
+  line-height: 1.6;
+}
+
+/* Estilos de video (sin cambios) */
+.video-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.responsive-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilos de acciones del post (me gusta, comentarios) */
+.post-actions {
+  margin-top: 20px;
+}
+
+.like-button, .comment-button, .submit-comment {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.like-button:hover, .comment-button:hover, .submit-comment:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos de comentarios */
+.comments-section {
+  margin-top: 20px;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.comment-input {
+  color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #1c1b1b;
+}
+
+/* Animaciones */
+.like-button {
+  transition: transform 0.2s;
+}
+
+.like-button:active {
+  transform: scale(1.1);
+}
+
+/* artice art-magiaReciclado */
+
+.art-magiaReciclado{
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* O 'cover' si quieres que cubra toda la sección */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    height: auto; 
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.contenido-margia-reciclado{
+    display: flex;
+    text-align: center;
+    width: 50%;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    background-size: 60% auto; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 590px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+}
+.contenido-margia-reciclado h3 {
+    font-family: 'Bungee Inline', cursive;
+    font-weight: normal;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contenido-margia-reciclado p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: "Instrument Sans", sans-serif;
+    
+}
+.imagen-margia-reciclado {
+    text-align: center;
+}
+.imagen-margia-reciclado img {
+   
+    height: 600px;
+    width: 400px;
+}
+
+/*Seccion moda urbana */
+
+.contenedor-seccion{
+  display: flex;
+}
+.contenido-moda-urbana{
+  width: 60%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.contenido-moda-urbana h3{
+  font-family: 'Bungee Inline', cursive;
+  font-weight: normal;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.texto-principal{
+  text-align: center;
+}
+
+.text-secundario{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+/*ensayo*/
+.contenedor-deslizador-3d {
+  margin-left: 100px;
+  width: 300px; /* Ajusta el ancho según tus imágenes */
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.pista-deslizamiento-3d {
+  display: flex;
+  transform-style: preserve-3d;
+  transition:  transform 0.8s ease-in-out;
+}
+
+.grupo-deslizamiento-3d {
+  flex: 0 0 100%;
+  transform-origin: center center;
+  transform: rotateY(0deg) translateZ(0);
+}
+
+.imagen-deslizamiento-3d {
+  width: 100%;
+  height: auto;
+}
+
+/*seccion moda-actitud */
+.contenedor-modaurban{
+  background-image: url("../images/ensayo.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+ 
+}
+.lema-final{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+.lema-final h3{
+  text-align: center;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 3.0em;
+  margin-bottom: 30px;
+  text-align: center;
+  margin: 45px;
+}
+.boton-ver-mas{
+  width: 45%;
+    height: 60px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* creacion de diseños footer*/
+
+
+footer {
+  background-color: #000000;
+  border-top: 1px solid #FFFFFF;
+  padding: 50px 20px;
+  color: #FFFFFF;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 30px;
+  
+}
+
+.footer-column {
+  width: 30%;
+}
+
+.footer-column h3 {
+  text-align: center;
+  font-family: 'Bungee Inline', cursive;
+  margin-bottom: 20px;
+}
+
+.footer-column p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 25px;
+}
+
+.fab{
+  color: white;
+  font-size: 45px;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+.style{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-logo{
+  width:50%;
+}
