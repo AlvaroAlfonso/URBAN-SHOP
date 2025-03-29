@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle del Producto</title>
+  <link rel="stylesheet" href="/css/detail.css">
+  
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Jomhuria&family=Lusitana&display=swap" rel="stylesheet">
+<!-- Agrega esto en tu head -->
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script>
+  window.MercadoPagoFunction = function() {
+    
+  };
+</script>
+</head>
+<body>
+  <!-- Marquesina -->
+  <header class="marquesina">
+    <div class="ticker">
+      COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN
+    </div>
+  </header>
+  <!-- Barra de navegación -->
+  <nav class="nav-bar">
+    <img src="/Assets/images/LogoUrbanShop.png" alt="Logo Urban&Shop" class="logo-img">
+    <ul class="nav-links">
+      <li><a href="/index.html"><i class="fas fa-home"></i></a></li>
+
+        <!-- Icono de ofertas (Etiqueta de descuento) -->
+        <li><a href="#"><i class="fas fa-tag"></i></a></li>
+      <li><a href="#">CONTÁCTANOS</a></li>
+      
+    
+      
+    </ul>
+    <div class="carrito" onclick="mostrarCarrito()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </nav>
+  
+  <!-- Modal del Carrito -->
+  <div id="modalCarrito" class="modal-carrito">
+    <div class="contenido-carrito">
+      <span class="close-btn" onclick="cerrarCarrito()">&times;</span>
+      <h2>Tu Carrito</h2>
+      <div id="carrito-items"></div>
+      <hr>
+      <div id="carrito-resumen">
+        <p>Subtotal: <span id="subtotal">$0</span></p>
+        <p>Total: <span id="total">$0</span></p>
+        <button class="btn-finalizar">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+
+  <!-- Contenedor del Producto Detalle -->
+  <section class="detalle-producto">
+    <div class="detalle-contenido">
+      <!-- Imágenes del producto -->
+      <div class="imagenes-producto">
+        <img id="imagen-producto" src="" alt="Imagen del Producto" class="producto-imagen">
+      </div>
+
+      <!-- Detalles del Producto -->
+      <div class="informacion-producto">
+        <h1 id="nombre-producto"></h1>
+        <p id="precio-producto" class="precio"></p>
+
+        <!-- Selector de Talla -->
+        <label for="talla">Tallas</label>
+        <select id="talla">
+          <option value="">Seleccione una talla</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+
+        <!-- Botones de acción -->
+        <div class="acciones">
+          <button class="btn-agregar" id="btn-agregar-carrito" >
+            <i class="fas fa-shopping-cart"></i> Agregar al carrito
+          </button>
+          
+          <button class="btn-rapida" id="btn-mercadopago">
+            <i class="fas fa-bolt"></i> Compra rápida
+          </button>
+          
+          <button class="btn-favoritos">
+            <i class="fas fa-heart"></i> Agregar a favoritos
+          </button>
+        </div>
+
+        <!-- Detalles adicionales del producto -->
+        <h3>Detalles del Producto</h3>
+        <p id="descripcion-producto"></p>
+
+        <h3>Información</h3>
+        <ul id="informacion">
+          <li>Actividad: <span id="actividad"></span></li>
+          <li>Material: <span id="material"></span></li>
+          <li>Color: <span id="color"></span></li>
+          <li>Origen: <span id="origen"></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <div class="logo-footer">
+                <img src="/Assets/images/LogoUrbanShop.png" alt="" class="image-logo">
+            </div>
+            <p>La moda puede cambiar el mundo. En URBAN&SHOP creemos en un futuro más sostenible. Cada prenda que creamos es una declaración de amor por el planeta y por la moda.</p>
+        </div>
+        <div class="footer-column style">
+            <h3>CONTACTÁNOS</h3>
+            <p>urbanshop@informacion.com</p>
+            <p>+57 3158154139</p>
+            <p>cra 28 # 17 - 75, Bogota</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="footer-column  style">
+            <h3>MENU</h3>
+            <p>INICIO</p>
+            <p>QUIENES SOMOS</p>
+            <p>ULTIMO EN MODA</p>
+            <p>BLOG</p>
+            <p>CONTACTANOS</p>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2025 URBAN&SHOP COPYRIGHT
+    </div>
+  </footer>
+
+<!-- Agregar FontAwesome para iconos -->
+<script src="https://kit.fontawesome.com/a7208eb71d.js" crossorigin="anonymous"></script>
+<script src="/.dist/detail.js"></script>
+<script src="/.dist/cart.js"></script>
+
+</body>
+</html>

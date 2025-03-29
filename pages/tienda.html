@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Urban&Shop</title>
+  <link rel="stylesheet" href="/css/tienda.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Jomhuria&family=Lusitana&display=swap" rel="stylesheet">
+  
+  <!-- Agrega esto en tu head -->
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script>
+  window.MercadoPagoFunction = function() {
+    
+  };
+</script>
+</head>
+<body>
+  <!-- Marquesina -->
+  <header class="marquesina">
+    <div class="ticker">
+      COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN  COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN  
+    </div>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav class="nav-bar">
+    <img src="/Assets/images/LogoUrbanShop.png" alt="Logo Urban&Shop" class="logo-img">
+    <div class="logo"></div>
+    <ul class="nav-links">
+      <li><a href="/index.html">INICIO</a></li>
+      <li><a href="/pages/nosotros.html">SOBRE NOSOTROS</a></li>
+      <li><a href="/pages/tienda.html">ÚLTIMA MODA</a></li>
+      <li><a href="/pages/blog.html">BLOG</a></li>
+      <li><a href="#">CONTÁCTANOS</a></li>
+    </ul>
+    
+    <div class="carrito" onclick="mostrarCarrito()">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </nav>
+    
+    
+    <!-- Modal del Carrito -->
+    <div id="modalCarrito" class="modal-carrito">
+      <div class="contenido-carrito">
+        <span class="close-btn" onclick="cerrarCarrito()">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="carrito-items"></div>
+        <hr>
+        <div id="carrito-resumen">
+          <p>Subtotal: <span id="subtotal">$0</span></p>
+          <p>Total: <span id="total">$0</span></p>
+          <button class="btn-finalizar">Finalizar Compra</button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    
+  <!-- Banner principal -->
+  <section class="hero banner">
+    <div class="hero-text">
+      <h1>MODA QUE TRANSFORMA,<br>HISTORIAS QUE INSPIRAN.</h1>
+      <p>URBAN&SHOP</p>
+    </div>
+    <div class="hero-img">
+      <img src="/Assets/images/bannerImg.png" alt="Modelo Urban Shop">
+      
+    </div>
+    
+  </section>
+  <!-- Línea divisoria -->
+  <hr class="linea-divisoria">
+
+ <!-- Sección de descuentos -->
+ <section class="seccion-productos">
+    
+    
+    <!-- Barra de búsqueda -->
+<div class="busqueda">
+    <input type="text" placeholder="Buscar...">
+    <span class="icono-lupa">🔍</span>
+  </div>
+  
+  
+    <!-- Filtro de ordenamiento -->
+    <div class="filtro-orden">
+      <label for="ordenar">Ordenar por:</label>
+      <select id="ordenar">
+        <option value="predeterminado">Predeterminado</option>
+        <option value="precio-asc">Precio: Menor a mayor</option>
+        <option value="precio-desc">Precio: Mayor a menor</option>
+        <option value="popularidad">Popularidad</option>
+      </select>
+    </div>
+  
+    <!-- Título de la sección -->
+    <h2 class="titulo-seccion">DESCUENTOS EN NUESTRAS PRENDAS SELECCIONADAS.</h2>
+  
+    <!-- Cards de productos -->
+    <div class="productos">
+  
+      
+      <!-- producto 1-->
+      <div class="producto">
+        <div class="favorito">♥</div>
+        <span class="etiqueta-descuento">20% OFF</span>
+        <img src="/Assets/images/producto1.png" alt="Producto 1">
+        <h3>Gorra en tela cubre sol</h3>
+        <p class="categoria">ACCESORIOS</p>
+      
+        <div class="precios">
+          <span class="precio-original">$50.000</span>
+          <span class="precio-descuento">$40.000</span>
+        </div>
+      
+        
+        <div class="cantidad-producto">
+            <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+            <input type="number" value="1" min="1" class="input-cantidad">
+            <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+     </div>
+     <div class="controles-finales">
+      <a href="/pages/detail.html?id=1" class="btn-vista">
+          <i class="fas fa-eye"></i>
+      </a>
+     
+        
+      
+      <button class="btn-carrito" 
+      data-producto='{"nombre": "Gorra en tela cubre sol", "precio": 40000, "imagen": "/Assets/images/producto1.png"}' 
+      onclick="event.preventDefault(); agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)">
+    <i class="fas fa-shopping-cart"></i>
+  </button>
+      </div>
+    </div>
+      <!-- producto 2-->
+     <div class="producto">
+        <div class="favorito">♥</div>
+        <span class="etiqueta-descuento">30% OFF</span>
+        <img src="/Assets/images/producto2.png" alt="Pendientes personalizados">
+        <h3>Aretes en madera diseño </h3>
+        <p class="categoria">ACCESORIOS</p>
+      
+        <div class="precios">
+          <span class="precio-original">$50.000</span>
+          <span class="precio-descuento">$35.000</span>
+        </div>
+      
+        <div class="cantidad-producto">
+            <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+            <input type="number" value="1" min="1" class="input-cantidad">
+            <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+          </div>
+          <div class="controles-finales">
+            <a href="/pages/detail.html?id=2" class="btn-vista">
+                <i class="fas fa-eye"></i>
+            </a>
+          
+          <button class="btn-carrito" 
+                  data-producto='{"nombre": "Aretes en madera diseño", "precio": 35000, "imagen": "/Assets/images/producto2.png"}' 
+                  onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+    </div>
+  </div>
+  
+     <!-- producto 3-->
+     <div class="producto">
+        <div class="favorito">♥</div>
+        <span class="etiqueta-descuento">50% OFF</span>
+        <img src="/Assets/images/producto3.jpg" alt="Gorra figuras">
+        <h3>Gorra negro transformado</h3>
+        <p class="categoria">ACCESORIOS</p>
+      
+        <div class="precios">
+          <span class="precio-original">$50.000</span>
+          <span class="precio-descuento">$25.000</span>
+        </div>
+      
+        <div class="cantidad-producto">
+            <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+            <input type="number" value="1" min="1" class="input-cantidad">
+            <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+          </div>
+          <div class="controles-finales">
+            <a href="/pages/detail.html?id=3" class="btn-vista">
+                <i class="fas fa-eye"></i>
+            </a>
+      
+        <button class="btn-carrito" 
+        data-producto='{"nombre": "Gorra negro happy transformado", "precio": 25000, "imagen": "/Assets/images/producto3.jpg"}' 
+        onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+        <i class="fas fa-shopping-cart"></i>
+        </button>
+
+    </div>
+  </div>
+  
+    </div>
+    <!-- Línea divisoria -->
+  <hr class="linea-divisoria">
+  </section>
+  <!-- Sección de colección urbana reciclada -->
+<section class="coleccion-urbana">
+    
+    <h2 class="titulo-coleccion">COLECCIÓN URBANA RECICLADA QUE ROME ESQUEMAS</h2>
+    <p class="descripcion-coleccion">
+      Viste con estilo y conciencia con nuestra <span class="resaltado">nueva colección</span> de ropa <span class="resaltado">reciclada urbana</span>.
+      Prendas creadas con <span class="resaltado">pasión y respeto por el planeta</span>, que te permiten expresar tu 
+      <span class="resaltado">individualidad</span> y contribuir a un futuro más sostenible.
+    </p>
+    <p class="llamado-accion">¡ÚNETE A NOSOTROS EN ESTE MOVIMIENTO HACIA UNA MODA MÁS RESPONSABLE!</p>
+  
+    <div class="productos-coleccion">
+      <!-- Producto 1 -->
+      <div class="producto">
+        <div class="favorito">♥</div>
+        <img src="/Assets/images/producto4.png" alt="Body negro silueta">
+        <h3>Body negro silueta</h3>
+        <p class="categoria">ROPA</p>
+        <span class="precio">$45.000</span>
+
+        <div class="cantidad-producto">
+            <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+            <input type="number" value="1" min="1" class="input-cantidad">
+            <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+        </div>
+       <div class="controles-finales">
+          <a href="/pages/detail.html?id=4" class="btn-vista">
+              <i class="fas fa-eye"></i>
+          </a>
+        <button class="btn-carrito" 
+        data-producto='{"nombre": "Body negro silueta", "precio": 45000, "imagen": "/Assets/images/producto4.png"}' 
+        onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+        <i class="fas fa-shopping-cart"></i>
+    </button>
+</div>
+</div>
+      
+      <!-- Producto 2 -->
+      <div class="producto">
+        <div class="favorito">♥</div>
+        <img src="/Assets/images/producto5.png" alt="Chaqueta impermeable clara">
+        <h3>Chaqueta impermeable</h3>
+        <p class="categoria">ROPA</p>
+        <span class="precio">$45.000</span>
+        <div class="cantidad-producto">
+            <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+            <input type="number" value="1" min="1" class="input-cantidad">
+            <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+          </div>
+          <div class="controles-finales">
+            <a href="/pages/detail.html?id=5" class="btn-vista">
+                <i class="fas fa-eye"></i>
+            </a>
+          
+          <button class="btn-carrito" 
+                  data-producto='{"nombre": "Chaqueta impermeable", "precio": 45000, "imagen": "/Assets/images/producto5.png"}' 
+                  onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
+      </div>
+
+    
+      <!-- Producto 3 -->
+      <div class="producto">
+        <div class="favorito">♥</div>
+        <img src="/Assets/images/producto6.png" alt="Falda short transformada ">
+        <h3>Falda short transformada </h3>
+        <p class="categoria">ROPA</p>
+        <span class="precio">$45.000</span>
+        <div class="cantidad-producto">
+            <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+            <input type="number" value="1" min="1" class="input-cantidad">
+            <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+          </div>
+          <div class="controles-finales">
+            <a href="/pages/detail.html?id=6" class="btn-vista">
+                <i class="fas fa-eye"></i>
+            </a>
+          
+          <button class="btn-carrito" 
+                  data-producto='{"nombre": "Falda short transformada", "precio": 45000, "imagen": "/Assets/images/producto6.png"}' 
+                  onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <!--Producto 4-->
+      <div class="producto">
+        <div class="favorito">♥</div>
+        <img src="/Assets/images/producto7.png" alt="Chaqueta personalizada ADIDAS">
+        <h3>Chaqueta personalizada ADIDAS</h3>
+        <p class="categoria">ROPA</p>
+        <span class="precio">$85.000</span>
+        <div class="cantidad-producto">
+            <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+            <input type="number" value="1" min="1" class="input-cantidad">
+            <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+          </div>
+          <div class="controles-finales">
+            <a href="/pages/detail.html?id=7" class="btn-vista">
+                <i class="fas fa-eye"></i>
+            </a>
+          
+          <button class="btn-carrito" 
+                  data-producto='{"nombre": "Chaqueta personalizada ADIDAS", "precio": 85000, "imagen": "/Assets/images/producto7.png"}' 
+                  onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
+      </div>
+      <!--Producto 5-->
+      <div class="producto">
+        <div class="favorito">♥</div>
+        <img src="/Assets/images/producto8.jpg" alt="Pantalon Estilo Campana rosa">
+        <h3>Pantalon Jean Estilo Campana rosa</h3>
+        <p class="categoria">ROPA</p>
+        <span class="precio">$85.000</span>
+        <div class="cantidad-producto">
+            <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+            <input type="number" value="1" min="1" class="input-cantidad">
+            <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+          </div>
+          <div class="controles-finales">
+            <a href="/pages/detail.html?id=8" class="btn-vista">
+                <i class="fas fa-eye"></i>
+            </a>
+          
+          <button class="btn-carrito" 
+                  data-producto='{"nombre": "Pantalon Estilo Campana rosa", "precio": 85000, "imagen": "/Assets/images/producto8.jpg}' 
+                  onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
+      </div>
+
+      <!--Producto 6-->
+      <div class="producto">
+        <div class="favorito">♥</div>
+        <img src="/Assets/images/producto9.png" alt="Chaqueta jeans y tela dama">
+        <h3>Chaqueta estampada en jean dama</h3>
+        <p class="categoria">ROPA</p>
+        <span class="precio">$85.000</span>
+        <div class="cantidad-producto">
+            <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+            <input type="number" value="1" min="1" class="input-cantidad">
+            <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+          </div>
+          <div class="controles-finales">
+            <a href="/pages/detail.html?id=9" class="btn-vista">
+                <i class="fas fa-eye"></i>
+            </a>
+          
+          <button class="btn-carrito" 
+                data-producto='{"nombre": "Chaqueta jeans y tela dama", "precio": 85000, "imagen": "/Assets/images/producto9.png"}' 
+                onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </div>
+      </div>
+  </section>
+  <!-- Línea divisoria -->
+  <hr class="linea-divisoria">
+  
+  <!-- Sección accesorios -->
+<section class="accesorios-reciclados">
+    <h2 class="titulo-accesorios">ACCESORIOS RECICLADOS ÚNICOS</h2>
+    <div class="productos-accesorios">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <span class="favorito">♥</span>
+            <img src="/Assets/images/producto10.png" alt="Bolso Denim Dama">
+            <h3>Bolso Denim Personalizado </h3>
+            <p class="categoria">ACCESORIOS</p>
+            <p class="precio">$65.000</p>
+            <div class="cantidad-producto">
+                <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+                <input type="number" value="1" min="1" class="input-cantidad">
+                <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+            <!-- Contenedor para ambos botones alineados -->
+    <div class="controles-finales">
+        <a href="/pages/detail.html?id=10" class="btn-vista">
+            <i class="fas fa-eye"></i>
+        </a>
+        <button class="btn-carrito" 
+                data-producto='{"nombre": "Bolso Denim Dama", "precio": 65000, "imagen": "img/producto10.png"}' 
+                onclick="event.stopPropagation(); agregarAlCarrito(
+                  JSON.parse(this.dataset.producto).nombre, 
+                  JSON.parse(this.dataset.producto).precio, 
+                  JSON.parse(this.dataset.producto).imagen, 
+                  this)">
+            <i class="fas fa-shopping-cart"></i>
+        </button>
+    </div>
+</div>
+
+        <!-- Producto 2 -->
+        <div class="producto">
+            <span class="favorito">♥</span>
+            <img src="/Assets/images/producto11.png" alt="Cartera Personalizada">
+            <h3>Cartera Personalizada</h3>
+            <p class="categoria">ACCESORIOS</p>
+            <p class="precio">$55.000</p>
+            <div class="cantidad-producto">
+                <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+                <input type="number" value="1" min="1" class="input-cantidad">
+                <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+            <div class="controles-finales">
+                <a href="/pages/detail.html?id=11" class="btn-vista">
+                    <i class="fas fa-eye"></i>
+                </a>
+            <button class="btn-carrito" 
+                    data-producto='{"nombre": "Cartera Personalizada", "precio": 55000, "imagen": "img/producto11.png"}' 
+                    onclick="event.stopPropagation(); agregarAlCarrito(
+                      JSON.parse(this.dataset.producto).nombre, 
+                      JSON.parse(this.dataset.producto).precio, 
+                      JSON.parse(this.dataset.producto).imagen, 
+                      this)">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        </div>
+    </div>
+
+        <!-- Producto 3 -->
+        <div class="producto">
+            <span class="favorito">♥</span>
+            <img src="/Assets/images/producto12.png" alt="Aretes Transformados">
+            <h3>Aretes Transformados</h3>
+            <p class="categoria">ACCESORIOS</p>
+            <p class="precio">$25.000</p>
+            <div class="cantidad-producto">
+                <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+                <input type="number" value="1" min="1" class="input-cantidad">
+                <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+            <div class="controles-finales">
+                <a href="/pages/detail.html?id=12" class="btn-vista">
+                    <i class="fas fa-eye"></i>
+                </a>
+            <button class="btn-carrito" 
+                    data-producto='{"nombre": "Aretes Transformados", "precio": 25000, "imagen": "img/producto12.png"}' 
+                    onclick="event.stopPropagation(); agregarAlCarrito(
+                      JSON.parse(this.dataset.producto).nombre, 
+                      JSON.parse(this.dataset.producto).precio, 
+                      JSON.parse(this.dataset.producto).imagen, 
+                      this)">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        </div>
+    </div>
+        <!-- Producto 4 -->
+        <div class="producto">
+            <span class="favorito">♥</span>
+            <img src="/Assets/images/producto13.png" alt="Pendientes Didácticos">
+            <h3>Pendientes Didácticos</h3>
+            <p class="categoria">ACCESORIOS</p>
+            <p class="precio">$25.000</p>
+            <div class="cantidad-producto">
+                <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+                <input type="number" value="1" min="1" class="input-cantidad">
+                <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+            <div class="controles-finales">
+                <a href="/pages/detail.html?id=13" class="btn-vista">
+                    <i class="fas fa-eye"></i>
+                </a>
+            <button class="btn-carrito" 
+                    data-producto='{"nombre": "Pendientes Didácticos", "precio": 25000, "imagen": "img/producto13.png"}' 
+                    onclick="event.stopPropagation(); agregarAlCarrito(
+                      JSON.parse(this.dataset.producto).nombre, 
+                      JSON.parse(this.dataset.producto).precio, 
+                      JSON.parse(this.dataset.producto).imagen, 
+                      this)">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        </div>
+    </div>
+
+        <!-- Producto 5 -->
+        <div class="producto">
+            <span class="favorito">♥</span>
+            <img src="/Assets/images/producto14.png" alt="Corbata Neutral">
+            <h3>Corbata Caballero Neutral</h3>
+            <p class="categoria">ACCESORIOS</p>
+            <p class="precio">$55.000</p>
+            <div class="cantidad-producto">
+                <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+                <input type="number" value="1" min="1" class="input-cantidad">
+                <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+            <div class="controles-finales">
+                <a href="/pages/detail.html?id=14" class="btn-vista">
+                    <i class="fas fa-eye"></i>
+                </a>
+            <button class="btn-carrito" 
+                    data-producto='{"nombre": "Corbata Neutral", "precio": 55000, "imagen": "img/producto14.png"}' 
+                    onclick="event.stopPropagation(); agregarAlCarrito(
+                      JSON.parse(this.dataset.producto).nombre, 
+                      JSON.parse(this.dataset.producto).precio, 
+                      JSON.parse(this.dataset.producto).imagen, 
+                      this)">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        </div>
+    </div>
+
+        <!-- Producto 6 -->
+        <div class="producto">
+            <span class="favorito">♥</span>
+            <img src="/Assets/images/producto15.png" alt="Monedero Personalizado">
+            <h3>Monedero Personalizado</h3>
+            <p class="categoria">ACCESORIOS</p>
+            <p class="precio">$70.000</p>
+            <div class="cantidad-producto">
+                <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
+                <input type="number" value="1" min="1" class="input-cantidad">
+                <button class="btn-mas" onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+            <div class="controles-finales">
+                <a href="/pages/detail.html?id=15" class="btn-vista">
+                    <i class="fas fa-eye"></i>
+                </a>
+            <button class="btn-carrito" 
+                    data-producto='{"nombre": "Monedero Personalizado", "precio": 70000, "imagen": "img/producto15.png"}' 
+                    onclick="event.stopPropagation(); agregarAlCarrito(
+                      JSON.parse(this.dataset.producto).nombre, 
+                      JSON.parse(this.dataset.producto).precio, 
+                      JSON.parse(this.dataset.producto).imagen, 
+                      this)">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        </div>
+    </div>
+</section>
+<footer>
+  <div class="footer-content">
+      <div class="footer-column">
+          <div class="logo-footer">
+              <img src="/Assets/images/Logo.png" alt="" class="image-logo">
+          </div>
+          <p>La moda puede cambiar el mundo. En URBAN&SHOP creemos en un futuro más sostenible. Cada prenda que creamos es una declaración de amor por el planeta y por la moda.</p>
+      </div>
+      <div class="footer-column style">
+          <h3>CONTACTÁNOS</h3>
+          <p>urbanshop@informacion.com</p>
+          <p>+57 3158154139</p>
+          <p>cra 28 # 17 - 75, Bogota</p>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+      </div>
+      <div class="footer-column  style">
+          <h3>MENU</h3>
+          <p>INICIO</p>
+          <p>QUIENES SOMOS</p>
+          <p>ULTIMO EN MODA</p>
+          <p>BLOG</p>
+          <p>CONTACTANOS</p>
+      </div>
+  </div>
+  <div class="copyright">
+      © 2025 URBAN&SHOP COPYRIGHT
+  </div>
+</footer>
+
+<!-- Agregar FontAwesome para iconos -->
+<script src="https://kit.fontawesome.com/a7208eb71d.js" crossorigin="anonymous"></script>
+<!-- Enlace al archivo JavaScript -->
+<script src="/.dist/cart.js"></script>
+<script src="/.dist/detail.js"></script>
+</body>
+</html>
