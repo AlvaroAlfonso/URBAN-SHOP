@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+/* Header */
+/* Marquesina ticker */
+.marquesina {
+    background-color: #0D8BB9;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    letter-spacing: 2px;
+  }
+ 
+  .ticker {
+    display: inline-block;
+    padding: 10px;
+    animation: ticker-scroll 30s linear infinite;
+    font-size: 14px;
+  }
+ 
+  .contact-button{
+    background-color: #0D8BB9;
+    padding: 10px;
+}
+
+   
+  @keyframes ticker-scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+ 
+  /* Navbar */
+  .nav-bar {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    position: relative;
+  }
+ 
+  .logo-img {
+    width: 7%;
+    margin-right: 15px;
+  }
+ 
+  .logo {
+    font-family: 'Lusitana', serif;
+    font-size: 28px;
+    color: white;
+  }
+ 
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Jomhuria', cursive;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+ 
+  .nav-links li a:hover {
+    color: #0D8BB9;
+  }
+ 
+  .carrito {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
+
+  /* CREACION SESSION LANDIG */
+
+.creacion-landing{
+  display: flex;
+  width: 100%;
+
+}
+
+.seccion-izquierda{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.image-fondo{
+  text-align: center;
+}
+
+.titulo-landing h1{
+  text-align: center;
+  font-family: 'Buenard';
+  font-family: 'Bungee Inline', cursive;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+}
+.highlight {
+  color: #0D8BB9;
+  font-weight: bold;
+}
+
+.right-section{
+  padding: 30px;
+}
+
+.right-section p{
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-family: "Instrument Sans", sans-serif;
+}
+.right-section h2{
+  text-align: center;
+  font-family: 'Buenard';
+  font-family: 'Bungee Inline', cursive;
+  font-size: 2.0em;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.creacion-landing{
+  padding: 30px;
+}
+.contenedor-slider{
+  display: flex;
+  justify-content: center;
+}
+  /* FIN CREACION SESSION LANDING */
+
+  /* CREACION DE SLIDER LANDING */
+  .slider-container {
+    width: 900px;
+    height: 350px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    display: flex;
+    width: 900px;
+    height: 300px;
+  }
+  
+  .slide img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .right-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .landing-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .landing-paragraph {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .products-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 400px;
+    align-self: center;
+    transition: transform 0.3s ease;
+  }
+  .products-button:hover {
+    transform: scale(1.05);
+}
+
+  /* FIN SLIDER LANDING */
+  /* creacion de diseños footer*/
+
+
+footer {
+    background-color: #000000;
+    border-top: 1px solid #FFFFFF;
+    padding: 50px 20px;
+    color: #FFFFFF;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 30px;
+    
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h3 {
+    text-align: center;
+    font-family: 'Bungee Inline', cursive;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 25px;
+}
+
+.fab{
+    color: white;
+    font-size: 45px;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+.style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-logo{
+    width:50%;
+}

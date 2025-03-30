@@ -1,68 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<body lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban&Shop.com</title>
-    <link rel="stylesheet" href="/css/Contactanos.css">
+    <link rel="stylesheet" href="../css/contactanos.css">
+    <title>Urban & Shop</title>
+    <script src="https://kit.fontawesome.com/a0fe0f97f9.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jomhuria&family=Lusitana&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="marquesina">
         <div class="ticker">COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN </div>
-
-    
-      <!-- Barra de navegación -->
-      <nav class="nav-bar">
-        <img src="/Assets/images/imagenLogo.jpeg" alt="Logo Urban&Shop" class="logo-img">
-        <div class="logo"></div>
-        <ul class="nav-links">
-          <li><a href="/index.html">INICIO</a></li>
-          <li><a href="/pages/nosotros.html">SOBRE NOSOTROS</a></li>
-          <li><a href="/pages/tienda.html">ÚLTIMA MODA</a></li>
-          <li><a href="/pages/blog.html">BLOG</a></li>
-          <li><a href="/pages/Contactanos.html" class="contact-button">CONTÁCTANOS</a></li>
-        </ul>
+        <!-- Barra de navegación -->
+        <nav class="nav-bar">
+            <img src="../Assets/images/Logo.png" alt="Logo Urban&Shop" class="logo-img">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="/index.html" >INICIO</a></li>
+                <li><a href="../pages/nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="../pages/tienda.html">ÚLTIMA MODA</a></li>
+                <li><a href="../pages/blog.html">BLOG</a></li>
+                <li><a href="../pages/contactanos.html" class="contact-button">CONTÁCTANOS</a></li>
+            </ul>
        
-        <div class="carrito" onclick="mostrarCarrito()">
-            🛒 <span id="cart-count">0</span>
-          </div>
+            <div class="carrito" onclick="mostrarCarrito()">
+                🛒 <span id="cart-count">0</span>
+            </div>
         </nav>
     </header>
-
-    <!-- Línea separadora -->
-<div class="separator"></div>
 
     <!-- Sección de imagen con texto -->
     <section class="banner">
         <div class="banner-content">
-            <h1>VISTE TE CON EXITO</h1>
+            <h1>VISTETE DE EXITO, <br> HABLEMOS DE COMO CONVERTIRLO</h1>
             <p>URBAN & SHOP</p>
         </div>
         <div class="banner-image">
-            <img src="/Assets/images/image promociones.png" alt="Imagen del Banner"> 
+            <img src="../Assets/images/banner-image4.png" alt="Imagen de promoción" class="banner-img">
         </div>
     </section>
+
 <!-- Sección de Contacto -->
-<section class="contacto">
-    <div class="contacto-texto">
+<section class="contactanos">
+    <div class="contactanos-izquierda">
         <h2>Bienvenido a Urban&Shop</h2>
         <p>Nos apasiona crear prendas únicas que reflejen tu estilo y compromiso con la sostenibilidad.</p>
-        
         <p><strong>Queremos saber más sobre ti,</strong> tu visión y lo que deseas lograr con tu ropa personalizada. Cada prenda que diseñamos es un reflejo de tu identidad y un paso hacia un futuro más consciente.</p>
-    
         <p>Por eso, te invitamos a completar el siguiente formulario para que podamos conocer tus ideas y crear algo verdaderamente especial. Cuéntanos tus gustos, necesidades y lo que te gustaría lograr con tus prendas. Nos encantaría trabajar contigo para hacer realidad tus proyectos de moda sostenible y auténtica.</p>
-    
         <p><strong>¿Tienes alguna pregunta o prefieres hablar directamente con nosotros?</strong> No dudes en ponerte en contacto para que podamos ayudarte en todo el proceso. Queremos ser parte de tu experiencia y ofrecerte un servicio personalizado que te haga sentir único y satisfecho.</p>
-    
         <p class="final-message">¡Esperamos tu mensaje para comenzar a crear juntos!</p>
     </div>
 
     <!-- Formulario de Contacto -->
-    <div class="formulario">
+    <div class="contactanos-derecha">
         <form action="#" method="post">
             <input type="text" placeholder="Nombre" name="nombre" required>
             <input type="tel" placeholder="Número telefónico" name="telefono" required>
@@ -73,13 +65,48 @@
     </div>
 </section>
 
-<!-- Línea separadora -->
-<div class="separator"></div>
-
 <!-- Mapa con tiendas cercanas en Google Maps -->
-<section class="mapa">
-
-    <div id="map" style="height: 500px; width: 100%;"></div>
+<section class="seccion-informacion">
+    <div class="contenedor-izquierdo">
+        <div class="titulo">
+            <h2>Contactános</h2>
+        </div>
+        <div class="info-contactanos">
+            <div class="numero-contacto">
+                <h3>+573158147852</h3>
+                <P>Numero Celular</P>
+            </div>
+            <div class="correo-contacto">
+                <h3>urbanshop@informacion.com</h3>
+                <p>Correo Electronico</p>
+            </div>
+            <div class="direccion-contacto">
+                <h3>cra 28 # 17 - 75, Bogota</h3>
+                <P>Ubicacion</P>
+            </div>
+        </div>
+        <div class="redes-sociales">
+            <div class="facebook">
+                <h3>@Urban&ShopOfficial</h3>
+                <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+            </div>
+            <div class="Instagram">
+                <h3>@Urban&ShopLive</h3>
+                <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+            </div>
+            <div class="tik-tok">
+                <h3>@Urban&ShopFlow</h3>
+                <i class="fa-brands fa-tiktok" style="color: #ffffff;"></i>
+            </div>
+        </div>
+        <div class="localizador-tiendas">
+            <map name=""></map>
+        </div>
+    </div>
+    <div class="contenedor-derecho">
+        
+    </div>
+    
 </section>
 
 <!-- Footer -->
@@ -87,7 +114,7 @@
     <div class="footer-content">
         <div class="footer-column">
             <div class="logo-footer">
-                <img src="/Assets/images/imagenLogo.jpeg" alt="" class="image-logo">
+                <img src="../Assets/images/Logo.png" alt="" class="image-logo">
             </div>
             <p>La moda puede cambiar el mundo. En URBAN&SHOP creemos en un futuro más sostenible. Cada prenda que creamos es una declaración de amor por el planeta y por la moda.</p>
         </div>
@@ -104,22 +131,16 @@
         </div>
         <div class="footer-column style">
             <h3>MENU</h3>
-            <!-- Añadidos los enlaces en el footer -->
-            <p><a href="/index.html">INICIO</a></p>
-            <p><a href="/pages/nosotros.html">QUIENES SOMOS</a></p>
-            <p><a href="/pages/tienda.html">ÚLTIMO EN MODA</a></p>
-            <p><a href="/pages/blog.html">BLOG</a></p>
-            <p><a href="/pages/Contactanos.html">CONTACTANOS</a></p>
+            <p>INICIO</p>
+            <p>QUIENES SOMOS</p>
+            <p>ULTIMO EN MODA</p>
+            <p>BLOG</p>
+            <p>CONTACTANOS</p>
         </div>
     </div>
     <div class="copyright">
         ©️ 2025 URBAN&SHOP COPYRIGHT
     </div>
 </footer>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <script src=".dist/formcontact.js"></script>
-    <script src="/.dist/cart.js"></script>
-    <script src="/.dist/detail.js"></script>
 </body>
 </html>
