@@ -321,7 +321,7 @@ body {
   
  
     background-blend-mode: multiply;
-    background-image: url('../images/fondo.png');
+    background-image: url('/Assets/images/fondo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; /* O 'cover' si quieres que cubra toda la sección */
@@ -458,7 +458,7 @@ body {
 .nuestros-valores {
     text-align: center;
     padding: 50px;
-    background-image: url('../images/imagen-robot-fondo.png');  /* Reemplaza con tu imagen de fondo */
+    background-image: url('/Assets/images/imagen-robot-fondo.png');  /* Reemplaza con tu imagen de fondo */
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -514,8 +514,8 @@ body {
 }
 
 /* Fondos para VISION y MISION (reemplaza con tus imágenes) */
-.vision { background-image: url('../images/img-valores1.png'); }
-.mision { background-image: url('../images/img-valores2.png'); }
+.vision { background-image: url('/Assets/images/img-valores1.png'); }
+.mision { background-image: url('/Assets/images/img-valores2.png'); }
 
 
 /* diseño footer*/

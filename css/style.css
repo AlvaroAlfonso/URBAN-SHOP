@@ -338,7 +338,8 @@ body {
     display: flex;
     text-align: center;
     width: 50%;
-    background-image: url('../images/fondo-metal.png');
+    background-image: url('/Assets/images/fondo-metal.png');
+    background-color: rgba(0, 0, 0, 0.836);
     padding: 20px;
     box-sizing: border-box;
     background-size: 60% auto; 
@@ -357,6 +358,7 @@ body {
     font-size: 2em;
     margin-bottom: 20px;
 }
+
 
 .contenido-quienes-somos p {
     text-align: justify;
@@ -444,6 +446,23 @@ body {
     gap: 20px;
     margin-bottom: 40px;
 }
+.image-box:hover {
+  transform: scale(1.05); /* Hace que la tarjeta se amplíe ligeramente */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Sombra suave para dar un efecto de profundidad */
+}
+
+/* Fondo oscuro con opacidad para resaltar el texto */
+.image-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+  z-index: 0;
+  transition: background 0.3s ease;
+}
 
 .image-box {
     position: relative;
@@ -451,7 +470,27 @@ body {
     height: 300px; /* Ajusta la altura según necesites */
     overflow: hidden;
 }
+/* Efecto de "hover" en el fondo oscuro */
+.image-box:hover::before {
+  background: rgba(0, 0, 0, 0.7); /* Oscurece el fondo al hacer hover */
+}
+.box-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Buenard';
+  color: #fff;
+  font-size: 1.5em;
+  z-index: 1;
+  opacity: 1; /* Inicialmente está oculto */
+  transition: opacity 0.3s ease; /* Transición para mostrar el texto */
+}
 
+/* Mostrar el título al hacer hover */
+.image-box:hover .box-title {
+  opacity: 4; /* Hace visible el título al hacer hover */
+}
 .image-box img {
     width: 100%;
     height: 100%;
@@ -489,7 +528,7 @@ body {
 }
 
 
-/* Fin estilos ultimo en moda */
+
 
 
 /* estilos del card */
@@ -515,14 +554,21 @@ body {
     margin-left: 94px;
 }
 
+/* Efecto hover en las cards */
 .card {
-    position: relative;
-    padding: 30px;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-    background-color: rgb(0 0 0 / 80%);
+  position: relative;
+  padding: 30px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgb(0 0 0 / 60%);
+  transition: opacity 0.3s ease; /* Transición suave para la opacidad */
 }
+
+.card:hover {
+  opacity: 0.9; /* Cambia la opacidad de la card al pasar el mouse */
+}
+
 
 .card h3 {
     font-family: 'Bungee Inline', cursive;
@@ -535,28 +581,30 @@ body {
     margin-bottom: 30px;
 }
 
+/* Estilos del botón "QUIERO VER MÁS" */
 .card button {
-    background-color: #FFFFFF;
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  background-color: #FFFFFF; /* Color de fondo inicial */
+  color: #000000; /* Color del texto inicial */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para color de fondo y texto */
 }
 
+/* Estilo cuando se pasa el mouse (hover) */
 .card button:hover {
-    transform: scale(1.05);
+  background-color: #000000; /* Fondo negro en el hover */
+  color: #FFFFFF; /* Texto blanco en el hover */
 }
-
 
 /* Fondos de las tarjetas (reemplaza con tus imágenes) */
-.card1 { background-image: url('../images/model1.png'); }
-.card2 { background-image: url('../images/model2.png'); }
-.card3 { background-image: url('../images/model3.png'); }
-.card4 { background-image: url('../images/model4.png'); }
-.card5 { background-image: url('../images/model5.png'); }
-.card6 { background-image: url('../images/model6.png'); }
+.card1 { background-image: url('/Assets/images/model1.png'); }
+.card2 { background-image: url('/Assets/images/model2.png'); }
+.card3 { background-image: url('/Assets/images/model3.png'); }
+.card4 { background-image: url('/Assets/images/model4.png'); }
+.card5 { background-image: url('/Assets/images/model5.png'); }
+.card6 { background-image: url('/Assets/images/model6.png'); }
 
 /* estilos contactanos formulario */
 
@@ -576,7 +624,7 @@ body {
     display: flex;
     text-align: center;
     width: 40%;
-    background-image: url('../images/imagen-robot-fondo.png'); /* Reemplaza con tu imagen */
+    background-image: url('/Assets/images/imagen-robot-fondo.png'); /* Reemplaza con tu imagen */
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
@@ -602,57 +650,82 @@ body {
     width: 40%;
 }
 
+/* Estilo para el contenedor de los mensajes de error */
+.contactanos-derecha .mensaje {
+  font-size: 14px;
+  color: #075F7C; /* azul para mensajes de error */
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+/* Estilo para el contenedor de los mensajes de éxito */
+.contactanos-derecha .mensaje-exito {
+  font-size: 14px;
+  color: #4F9DD4; /* Azulpara mensajes de éxito */
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+/* Estilos previos para el formulario y demás elementos siguen igual */
 .contactanos-derecha form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 10px;
+  float: right;
+  transform: translateY(70px);
+  border: 2px  solid #74a3c5;
+  box-shadow: 0px 4px 15px rgba(79, 157, 212, 0.3);
 }
 
 .contactanos-derecha input, .contactanos-derecha textarea {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #FFFFFF;
-    transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #4F9DD4;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 16px;
 }
 
 .contactanos-derecha input:focus, .contactanos-derecha textarea:focus {
-    background-color: rgba(255, 255, 255, 0.3);
+  background-color: #f7faff;
+  border-color: #0D8BB9;
 }
 
 .contactanos-derecha button {
-    background-color: #0D8BB9;
-    color: #FFFFFF;
-    border: none;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  background-color: #0D8BB9;
+  color: #FFFFFF;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .contactanos-derecha button:hover {
-    transform: scale(1.05);
-}
-
-/* Animación de los inputs */
-.input-animado {
-    position: relative;
+  transform: scale(1.05);
+  background-color: #075F7C;
 }
 
 .input-animado::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #0D8BB9;
-    transition: width 0.3s ease;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0D8BB9;
+  transition: width 0.3s ease;
 }
 
 .input-animado:focus::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* creacion de diseños footer*/

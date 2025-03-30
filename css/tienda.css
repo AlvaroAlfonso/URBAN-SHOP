@@ -340,7 +340,7 @@
       margin: auto; /* Centrar la sección */
   }
   .productos-coleccion {
-      background-image: url('/img/FondoTranslucido.png'); /* Imagen de fondo */
+      background-image: url('/Assets/images/FondoTranslucido.png'); /* Imagen de fondo */
       
       background-position: top; /* Mueve la imagen hacia arriba */
       background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -440,7 +440,7 @@
       margin: auto; /* Centrar la sección */
   }
   .productos-accesorios {
-      background-image: url('/img/FondoTranslucido.png'); /* Imagen de fondo */
+      background-image: url('/Assets/images/FondoTranslucido.png'); /* Imagen de fondo */
       
       background-position: top; /* Mueve la imagen hacia arriba */
       background-repeat: no-repeat; /* Evita que la imagen se repita */

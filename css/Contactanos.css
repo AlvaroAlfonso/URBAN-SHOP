@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
-* {
-    padding: 0px;
+*{
+    padding:0px;
     margin: 0px;
     box-sizing: border-box;
 }
@@ -13,6 +13,40 @@ body {
     color: #ffffff;
 }
 
+
+
+
+/* Marquesina ticker */
+.marquesina {
+    background-color: #0D8BB9;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    letter-spacing: 2px;
+  }
+ 
+  .ticker {
+    display: inline-block;
+    padding: 10px;
+    animation: ticker-scroll 30s linear infinite;
+    font-size: 14px;
+  }
+ 
+  .contact-button{
+    background-color: #0D8BB9;
+    padding: 10px;
+}
+
+   
+  @keyframes ticker-scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+ 
   /* Navbar */
   .nav-bar {
     background-color: #000;
@@ -50,18 +84,14 @@ body {
     transition: color 0.3s;
   }
  
-  .nav-links li a:hover {
-    color: #0D8BB9;
-  }
- 
+  
   .carrito {
     font-size: 20px;
     color: white;
     cursor: pointer;
   }
  
- 
-/* Estilo para la sección del banner */
+
 /*Banner estilos*/
 .banner {
     display: flex;
@@ -95,17 +125,15 @@ body {
 }
 
 .banner-image {
-    flex: -2;
+    flex: 1;
     text-align: right;
-    transform: translateY(56px);
+    padding: 10px 20px 10px 5px;
 }
 
 .banner-image img {
     width: 400px;
     height: 500px;
-    margin-left: 13%;
 }
-
 
 /* Franja Azul */
 .banner::before {
@@ -119,60 +147,168 @@ body {
     transform: skew(-82deg);
     z-index: -1;
 }
-
-/* Estilos para el texto y la imagen */
-.banner-text {
-    text-align: center;
-    color: white;
-    font-family: 'Lusitana', serif;
-    margin-right: 20px;
-}
-
-.banner-text h1 {
-    font-family: 'Jomhuria', serif;
-}
-
-.banner-text p {
+/*modal carrito*/
+/* Estilos del Carrito */
+.modal-carrito {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: white;
+    color: #333;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    font-size: 11px;
+  }
+  
+  .btn-eliminar {
+    background: none;
+    border: none;
+    color: #ff5252;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px;
+  }
+  
+  .btn-eliminar:hover {
+    color: #ff0000;
+  }
+  .contenido-carrito {
+    padding: 20px;
+  }
+  
+  .close-btn {
     font-size: 24px;
-    font-weight: bold;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .info-producto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+  }
+  
+  .info-producto img {
+    border-radius: 4px;
+  }
+  .cantidad-producto {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
 
-.banner-img {
-    max-width: 500px;
-    height: auto;
+.cantidad-producto button {
+  width: 30px;
+  height: 30px;
+  background: #0D8BB9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cantidad-producto button:hover {
+  background: #0a7ba3;
+}
+
+.cantidad-producto input {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+  .controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .controles-cantidad button {
+    background: #f0f0f0;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .controles-cantidad button:hover {
+    background: #ddd;
+  }
+  
+  .btn-eliminar {
+    color: #ff5252;
+    margin-left: 10px;
+  }
+  
+  #carrito-resumen {
     margin-top: 20px;
-    border-radius: 10px;
-}
-
-/* Marquesina ticker */
-.marquesina {
-    background-color: #0D8BB9;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    letter-spacing: 2px;
-}
-
-.ticker {
-    display: inline-block;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  .btn-finalizar {
+    width: 100%;
     padding: 10px;
-    animation: ticker-scroll 30s linear infinite;
-    font-size: 14px;
-}
-
-.contact-button {
-    background-color: #0D8BB9;
-    padding: 10px;
-}
-
-@keyframes ticker-scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
+    background: #0D8BB9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn-finalizar:hover {
+    background: #0a7ba3;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  /* Notificación */
+  .notificacion {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0D8BB9;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .notificacion.mostrar {
+    opacity: 1;
+  }
 /* Línea separadora entre el banner y promociones */
 .separator {
     width: 100%;
@@ -235,7 +371,7 @@ body {
     flex-direction: row; /* Usamos row para que el contenido se acomode en fila */
     justify-content: space-between; /* Esto permite que el texto y el formulario estén a los lados opuestos */
     align-items: flex-start; /* Alinea los elementos al principio de la columna */
-    background-image: url('..//img/muñecaGris.png'); /* Ruta de la imagen de fondo */
+    background-image: url('/Assets/images/muñecaGris.png'); /* Ruta de la imagen de fondo */
     background-position: relative, 50px; /* Centra la imagen */
     background-repeat: no-repeat; /* No repite la imagen */
     padding: 20px; /* Agrega espacio alrededor del texto para no pegarse a los bordes */
@@ -360,7 +496,9 @@ body {
     border-bottom: none;
 }
 
-/* Pie de página */
+/* creacion de diseños footer*/
+
+
 footer {
     background-color: #000000;
     border-top: 1px solid #FFFFFF;
@@ -374,8 +512,13 @@ footer {
     justify-content: space-around;
     border-bottom: 1px solid #FFFFFF;
     padding-bottom: 30px;
+    
 }
-
+footer .footer-column a {
+    color: white; /* Enlaces en color blanco */
+    text-decoration: none; /* Eliminar subrayado */
+    transition: color 0.3s ease; /* Transición suave (opcional) */
+}
 .footer-column {
     width: 30%;
 }
@@ -391,6 +534,8 @@ footer {
     line-height: 1.6;
 }
 
+
+/* Estilos para los iconos de redes sociales */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -398,29 +543,35 @@ footer {
     gap: 25px;
 }
 
-.fab {
-    color: white;
-    font-size: 45px;
+.social-icons a {
+    color: white; /* Color blanco para los iconos */
+    font-size: 45px; /* Tamaño de los iconos */
+    transition: color 0.3s ease; /* Transición suave para cambio de color */
 }
 
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
+.social-icons a:hover {
+    color: #0D8BB9; /* Cambia el color cuando pasa el ratón */
 }
+
+.fab {
+    font-size: 45px; /* Asegura el tamaño adecuado de los iconos */
+}
+
 
 .copyright {
     text-align: center;
     padding-top: 30px;
 }
-
-.style {
+.style{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.image-logo {
-    width: 50%;
+.image-logo{
+    width:50%;
+}
+.logo-footer {
+    text-align: center;
 }
