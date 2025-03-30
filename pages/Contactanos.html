@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban&Shop.com</title>
+    <link rel="stylesheet" href="..//css/Contactanos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jomhuria&family=Lusitana&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="marquesina">
+        <div class="ticker">COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN </div>
+
+    
+      <!-- Barra de navegación -->
+      <nav class="nav-bar">
+        <img src="..//img/imagenLogo.jpeg" alt="Logo Urban&Shop" class="logo-img">
+        <div class="logo"></div>
+        <ul class="nav-links">
+          <li><a href="/index.html">INICIO</a></li>
+          <li><a href="/pages/nosotros.html">SOBRE NOSOTROS</a></li>
+          <li><a href="/pages/tienda.html">ÚLTIMA MODA</a></li>
+          <li><a href="/pages/blog.html">BLOG</a></li>
+          <li><a href="..//page/Contactanos.html" class="contact-button">CONTÁCTANOS</a></li>
+        </ul>
+       
+        <div class="carrito" onclick="mostrarCarrito()">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </nav>
+    </header>
+
+    <!-- Línea separadora -->
+<div class="separator"></div>
+
+    <!-- Sección de imagen con texto -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>VISTE TE CON EXITO</h1>
+            <p>URBAN & SHOP</p>
+        </div>
+        <div class="banner-image">
+            <img src="..//img/image promociones.png" alt="Imagen del Banner"> 
+        </div>
+    </section>
+<!-- Sección de Contacto -->
+<section class="contacto">
+    <div class="contacto-texto">
+        <h2>Bienvenido a Urban&Shop</h2>
+        <p>Nos apasiona crear prendas únicas que reflejen tu estilo y compromiso con la sostenibilidad.</p>
+        
+        <p><strong>Queremos saber más sobre ti,</strong> tu visión y lo que deseas lograr con tu ropa personalizada. Cada prenda que diseñamos es un reflejo de tu identidad y un paso hacia un futuro más consciente.</p>
+    
+        <p>Por eso, te invitamos a completar el siguiente formulario para que podamos conocer tus ideas y crear algo verdaderamente especial. Cuéntanos tus gustos, necesidades y lo que te gustaría lograr con tus prendas. Nos encantaría trabajar contigo para hacer realidad tus proyectos de moda sostenible y auténtica.</p>
+    
+        <p><strong>¿Tienes alguna pregunta o prefieres hablar directamente con nosotros?</strong> No dudes en ponerte en contacto para que podamos ayudarte en todo el proceso. Queremos ser parte de tu experiencia y ofrecerte un servicio personalizado que te haga sentir único y satisfecho.</p>
+    
+        <p class="final-message">¡Esperamos tu mensaje para comenzar a crear juntos!</p>
+    </div>
+
+    <!-- Formulario de Contacto -->
+    <div class="formulario">
+        <form action="#" method="post">
+            <input type="text" placeholder="Nombre" name="nombre" required>
+            <input type="tel" placeholder="Número telefónico" name="telefono" required>
+            <input type="email" placeholder="Correo electrónico" name="correo" required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn-enviar">ENVIAR AHORA</button>
+        </form>
+    </div>
+</section>
+
+<!-- Línea separadora -->
+<div class="separator"></div>
+
+<!-- Mapa con tiendas cercanas en Google Maps -->
+<section class="mapa">
+
+    <div id="map" style="height: 500px; width: 100%;"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <div class="logo-footer">
+                <img src="..//img/imagenLogo.jpeg" alt="" class="image-logo">
+            </div>
+            <p>La moda puede cambiar el mundo. En URBAN&SHOP creemos en un futuro más sostenible. Cada prenda que creamos es una declaración de amor por el planeta y por la moda.</p>
+        </div>
+        <div class="footer-column style">
+            <h3>CONTACTÁNOS</h3>
+            <p>urbanshop@informacion.com</p>
+            <p>+57 3158154139</p>
+            <p>cra 28 # 17 - 75, Bogota</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="footer-column style">
+            <h3>MENU</h3>
+            <p>INICIO</p>
+            <p>QUIENES SOMOS</p>
+            <p>ULTIMO EN MODA</p>
+            <p>BLOG</p>
+            <p>CONTACTANOS</p>
+        </div>
+    </div>
+    <div class="copyright">
+        ©️ 2025 URBAN&SHOP COPYRIGHT
+    </div>
+</footer>
