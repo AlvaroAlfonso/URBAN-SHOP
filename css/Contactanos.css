@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+  /* Navbar */
+  .nav-bar {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    position: relative;
+  }
+ 
+  .logo-img {
+    width: 7%;
+    margin-right: 15px;
+  }
+ 
+  .logo {
+    font-family: 'Lusitana', serif;
+    font-size: 28px;
+    color: white;
+  }
+ 
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Jomhuria', cursive;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+ 
+  .nav-links li a:hover {
+    color: #0D8BB9;
+  }
+ 
+  .carrito {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+ 
+ 
+/* Estilo para la sección del banner */
+/*Banner estilos*/
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+    overflow: hidden; /* Para ocultar el desbordamiento del romboide */
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.banner-content {
+    flex: 1;
+    color: #FFFFFF;
+}
+
+.banner-content h1 {
+    font-family: 'Jomhuria', cursive;
+    font-size: 120px;
+    font-weight: 100;
+    margin-bottom: -20px;
+}
+
+
+.banner-content p {
+    font-family: 'Lusitana', serif;
+    font-size: 25px;
+    letter-spacing: 30px;
+    text-align: end;
+
+}
+
+.banner-image {
+    flex: -2;
+    text-align: right;
+    transform: translateY(56px);
+}
+
+.banner-image img {
+    width: 400px;
+    height: 500px;
+    margin-left: 13%;
+}
+
+
+/* Franja Azul */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20%; /* Ajusta para que el romboide comience fuera de la pantalla */
+    width:180%; /* Ajusta para que el romboide cubra todo el banner */
+    height: 100%;
+    background-color: #0D8BB9;
+    transform: skew(-82deg);
+    z-index: -1;
+}
+
+/* Estilos para el texto y la imagen */
+.banner-text {
+    text-align: center;
+    color: white;
+    font-family: 'Lusitana', serif;
+    margin-right: 20px;
+}
+
+.banner-text h1 {
+    font-family: 'Jomhuria', serif;
+}
+
+.banner-text p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.banner-img {
+    max-width: 500px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Marquesina ticker */
+.marquesina {
+    background-color: #0D8BB9;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.ticker {
+    display: inline-block;
+    padding: 10px;
+    animation: ticker-scroll 30s linear infinite;
+    font-size: 14px;
+}
+
+.contact-button {
+    background-color: #0D8BB9;
+    padding: 10px;
+}
+
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* Línea separadora entre el banner y promociones */
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #0D8BB9;
+    margin: 20px 0;
+}
+
+/* Navbar */
+.nav-bar {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.logoImagen {
+    width: 7%;
+    margin-right: 15px;
+}
+
+.logo {
+    font-family: 'Lusitana', serif;
+    font-size: 28px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Jomhuria', cursive;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #0D8BB9;
+}
+
+.carrito {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.contacto {
+    background-color: #000000;
+    padding: 50px;
+    display: flex;
+    flex-direction: row; /* Usamos row para que el contenido se acomode en fila */
+    justify-content: space-between; /* Esto permite que el texto y el formulario estén a los lados opuestos */
+    align-items: flex-start; /* Alinea los elementos al principio de la columna */
+    background-image: url('..//img/muñecaGris.png'); /* Ruta de la imagen de fondo */
+    background-position: relative, 50px; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    padding: 20px; /* Agrega espacio alrededor del texto para no pegarse a los bordes */
+    border-radius: 8px; /* Esquinas redondeadas para mayor estilo */
+    background-size: auto 90%; /* Ajusta el tamaño de la imagen de fondo */
+    background-position: 300px; /* Posiciona la imagen en la parte superior izquierda */
+}
+
+
+
+.contacto-texto {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    text-align: center;
+    flex: 1;
+    max-width: 60%;
+    padding-right: 20px;
+    margin-top: 50px;
+    overflow-y: auto;
+    padding-left: 30px; /* Añadido para más margen */
+}
+
+.contacto-texto h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.contacto-texto p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #D3D3D3;
+}
+
+.contacto-texto .final-message {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.contacto-texto strong {
+    font-weight: bold;
+    color: #FFFFFF; /* Resalta las partes importantes */
+}
+
+.linea {
+    width: 100%;                   /* Hace que la línea cubra todo el ancho */
+    border-top: 1px #ffffff; /* Línea blanca de 3px de grosor */
+    top: 50px;              /* Espaciado desde la parte superior */
+    margin-bottom: 10%;           /* Espaciado hacia abajo */
+    transform: translateY(56px);
+}
+
+/* Separación y estilos del formulario */
+.formulario {
+    width: 70%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    float: right;
+    transform: translateY(70px);
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #4F9DD4;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: white;
+    font-size: 16px;
+}
+
+.formulario textarea {
+    height: 150px;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 15px;
+    background-color: #0D8BB9;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Animación suave */
+}
+
+/* Efecto hover */
+.formulario button:hover {
+    background-color: #0277b3;
+    transform: scale(1.1); /* Hace que el botón se agrande ligeramente */
+}
+
+/* Efecto de pulsación */
+.formulario button:active {
+    transform: scale(0.98); /* Hace que el botón se encoja ligeramente al hacer clic */
+    background-color: #015f84; /* Cambio de color para cuando está en clic */
+}
+
+/* Transición de cambio de color y escalado */
+.formulario button:focus {
+    outline: none; /* Remueve el borde por defecto del enfoque */
+    box-shadow: 0 0 5px 2px rgba(13, 139, 185, 0.7); /* Sombra para enfoque */
+}
+
+/* Estilo de separación entre las secciones del formulario */
+.formulario > * {
+    border-bottom: 2px solid #444;
+    padding-bottom: 20px;
+}
+
+.formulario > *:last-child {
+    border-bottom: none;
+}
+
+/* Pie de página */
+footer {
+    background-color: #000000;
+    border-top: 1px solid #FFFFFF;
+    padding: 50px 20px;
+    color: #FFFFFF;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 30px;
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h3 {
+    text-align: center;
+    font-family: 'Bungee Inline', cursive;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 25px;
+}
+
+.fab {
+    color: white;
+    font-size: 45px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-logo {
+    width: 50%;
+}
