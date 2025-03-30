@@ -30,7 +30,21 @@
             </div>
         </nav>
     </header>
-
+    <!-- Modal del Carrito -->
+    <div id="modalCarrito" class="modal-carrito">
+        <div class="contenido-carrito">
+          <span class="close-btn" onclick="cerrarCarrito()">&times;</span>
+          <h2>Tu Carrito</h2>
+          <div id="carrito-items"></div>
+          <hr>
+          <div id="carrito-resumen">
+            <p>Subtotal: <span id="subtotal">$0</span></p>
+            <p>Total: <span id="total">$0</span></p>
+            <button class="btn-finalizar">Finalizar Compra</button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
     <!-- Sección de imagen con texto -->
     <section class="banner">
         <div class="banner-content">
@@ -55,12 +69,23 @@
 
     <!-- Formulario de Contacto -->
     <div class="contactanos-derecha">
-        <form action="#" method="post">
-            <input type="text" placeholder="Nombre" name="nombre" required>
-            <input type="tel" placeholder="Número telefónico" name="telefono" required>
-            <input type="email" placeholder="Correo electrónico" name="correo" required>
-            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-            <button type="submit" class="btn-enviar">ENVIAR AHORA</button>
+        <form>
+            <input type="text" id="nombre" placeholder="Nombre" class="input-animado">
+            <div id="mensaje-nombre"></div>
+            
+            <input type="text" id="apellidos" placeholder="Apellidos" class="input-animado">
+            <div id="mensaje-apellidos"></div>
+            
+            <input type="tel" id="telefono" placeholder="Número telefónico" class="input-animado">
+            <div id="mensaje-telefono"></div>
+            
+            <input type="email" id="correo" placeholder="Correo electrónico" class="input-animado">
+            <div id="mensaje-correo"></div>
+            
+            <textarea id="mensaje" placeholder="Mensaje" class="input-animado"></textarea>
+            <div id="mensaje-mensaje"></div>
+            
+            <button type="submit">ENVIAR AHORA</button>
         </form>
     </div>
 </section>
@@ -142,5 +167,8 @@
         ©️ 2025 URBAN&SHOP COPYRIGHT
     </div>
 </footer>
+    <script src="../.dist/formcontact.js"></script>
+    <script src="../.dist/cart.js"></script>
+    <script src="../.dist/detail.js"></script>
 </body>
 </html>

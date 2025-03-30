@@ -29,6 +29,21 @@
           </div>
         </nav>
     </header>
+    <!-- Modal del Carrito -->
+    <div id="modalCarrito" class="modal-carrito">
+      <div class="contenido-carrito">
+        <span class="close-btn" onclick="cerrarCarrito()">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="carrito-items"></div>
+        <hr>
+        <div id="carrito-resumen">
+          <p>Subtotal: <span id="subtotal">$0</span></p>
+          <p>Total: <span id="total">$0</span></p>
+          <button class="btn-finalizar">Finalizar Compra</button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
     <div class="titulo-landing">
       <h1>¡Transforma tu estilo con <span class="highlight">REBEL DÉCADAS</span>!</h1>
     </div>
