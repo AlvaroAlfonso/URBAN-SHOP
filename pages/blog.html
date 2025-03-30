@@ -32,6 +32,23 @@
           </div>
         </nav>
     </header>
+     <!-- Modal del Carrito -->
+     <div id="modalCarrito" class="modal-carrito">
+        <div class="contenido-carrito">
+          <span class="close-btn" onclick="cerrarCarrito()">&times;</span>
+          <h2>Tu Carrito</h2>
+          <div id="carrito-items"></div>
+          <hr>
+          <div id="carrito-resumen">
+            <p>Subtotal: <span id="subtotal">$0</span></p>
+            <p>Total: <span id="total">$0</span></p>
+            <button class="btn-finalizar">Finalizar Compra</button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      
+      
 
     <section class="banner">
         <div class="banner-content">
@@ -227,13 +244,14 @@
                     <a href="#"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
-            <div class="footer-column  style">
+            <div class="footer-column style">
                 <h3>MENU</h3>
-                <p>INICIO</p>
-                <p>QUIENES SOMOS</p>
-                <p>ULTIMO EN MODA</p>
-                <p>BLOG</p>
-                <p>CONTACTANOS</p>
+                <!-- Añadidos los enlaces en el footer -->
+                <p><a href="/index.html">INICIO</a></p>
+                <p><a href="/pages/nosotros.html">QUIENES SOMOS</a></p>
+                <p><a href="/pages/tienda.html">ÚLTIMO EN MODA</a></p>
+                <p><a href="/pages/blog.html">BLOG</a></p>
+                <p><a href="#">CONTACTANOS</a></p>
             </div>
         </div>
         <div class="copyright">
@@ -241,5 +259,7 @@
         </div>
     </footer>
     <script src="/.dist/blog.js"></script> 
+    <script src="/.dist/cart.js"></script>
+    <script src="/.dist/detail.js"></script>
 </body>
 </html>

@@ -1,26 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 *{
-    padding: 0%;
-    margin:0%;
+    padding:0px;
+    margin: 0px;
     box-sizing: border-box;
-  }
+}
   body {
-      margin: 0;
-      background-color: #000;
-      color: white;
-      font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
     }
     
     /* Marquesina ticker */
     .marquesina {
-      background-color: #0D8BB9;
-      overflow: hidden;
-      white-space: nowrap;
-      position: relative;
-      
-      letter-spacing: 2px;
-  
-      
-      
+    background-color: #0D8BB9;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    letter-spacing: 2px;
     }
     
     .ticker {
@@ -29,6 +27,10 @@
       animation: ticker-scroll 30s linear infinite;
       font-size: 14px;
     }
+    .contact-button{
+      background-color: #0D8BB9;
+      padding: 10px;
+  }
     
       
     @keyframes ticker-scroll {
@@ -41,114 +43,111 @@
     }
     
     /* Navbar */
-    .nav-bar {
-      background-color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 30px;
-      position: relative;
-    }
-    
-    .logo-img {
-      width: 7%;
-      margin-right: 15px;
-    }
-    
-    .logo {
-      font-family: 'Lusitana', serif;
-      font-size: 28px;
-      color: white;
-    }
-    
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .nav-links li a {
-      color: white;
-      text-decoration: none;
-      font-family: 'Jomhuria', cursive;
-      font-size: 24px;
-      transition: color 0.3s;
-    }
-    
-    .nav-links li a:hover {
-      color: #0D8BB9;
-    }
-    
-    .carrito {
-      font-size: 20px;
-      color: white;
-      cursor: pointer;
-    }
-    
-    /* Banner */
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      padding: 85px;
-      overflow: hidden;
-      height: 440px;
-    }
-    
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -60%;
-      width: 180%;
-      height: 100%;
-      background-color: #0D8BB9;
-      transform: skew(-82deg);
-      z-index: -1;
-    }
-    
-    .hero-text h1 {
-      font-size:90px;
-      font-weight: 100;
-      margin: 0;
-      font-family: 'Jomhuria', cursive;
-    }
-    
-    .hero-text p {
-      font-family: 'Lusitana', serif;
-      font-size: 25px;
-      margin-top: 15px;
-      text-align:center;
-      letter-spacing: 1.0em; /* Añade espacio entre letras */
-    }
-    
-    .hero-img img {
-      height: 450px;
-      object-fit: contain;
-    }
-    
-    .linea-divisoria {
-      border: none;
-      height: 2px;
-      background-color: white; /* Color de la línea */
-      width: 90%; /* Ajusta el ancho */
-      margin: 70px auto 30px auto; /* 60px de espacio arriba, 40px abajo, centrado */
+  .nav-bar {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    position: relative;
   }
-  /* General seccion descuentos */
-  body {
-      background-color: #000;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      margin-bottom: 50px;
-    }
+ 
+  .logo-img {
+    width: 7%;
+    margin-right: 15px;
+  }
+ 
+  .logo {
+    font-family: 'Lusitana', serif;
+    font-size: 28px;
+    color: white;
+  }
+ 
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Jomhuria', cursive;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+
+ 
+  
+ 
+  .carrito {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
     
-    .seccion-productos {
-      padding: 20px;
-      
-    }
+ 
+    
+    /*Banner estilos*/
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  position: relative;
+  overflow: hidden; /* Para ocultar el desbordamiento del romboide */
+  border-bottom: 1px solid #FFFFFF;
+}
+.banner-content {
+  flex: 1;
+  color: #FFFFFF;
+}
+
+.banner-content h1 {
+  font-family: 'Jomhuria', cursive;
+  font-size: 90px;
+  font-weight: 100;
+  margin-bottom: -20px;
+}
+
+.banner-content p {
+  font-family: 'Lusitana', serif;
+  font-size: 25px;
+  margin-top: 15px;
+  text-align: end;
+  letter-spacing: 1.0em; /* Añade espacio entre letras */
+}
+
+.banner-image {
+  flex: 1;
+  text-align: right;
+}
+
+.banner-image img {
+  width: 400px;
+  height: 500px;
+}
+
+/* Franja Azul */
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20%; /* Ajusta para que el romboide comience fuera de la pantalla */
+  width:180%; /* Ajusta para que el romboide cubra todo el banner */
+  height: 100%;
+  background-color: #0D8BB9;
+  transform: skew(-82deg);
+  z-index: -1;
+}
+  /*  seccion descuentos */
+  
+  .seccion-productos {
+  padding: 20px;
+  }
     
     /* Buscador */
     .busqueda {
@@ -220,6 +219,7 @@
       transition: transform 0.3s;
       font-family: 'Bungee Inline', cursive; /* Aplicamos la nueva fuente */
       border-radius: 0; /* Elimina el borde redondeado */
+      margin-bottom: 50px;
   }
   /* Aplicar color azul en el descuento y color negro en los precios */
   .precio-original {
@@ -296,7 +296,7 @@
       text-align: center;
       background-color: #000000;
       padding: 0px 15px;
-      margin: 40px auto 50px auto; /* 60px de espacio arriba, 40px abajo, centrado */
+      margin: 40px auto 10px auto; /* 60px de espacio arriba, 40px abajo, centrado */
     }
     
     
@@ -673,7 +673,7 @@
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      background: #4CAF50;
+      background: #0D8BB9;
       color: white;
       padding: 12px 24px;
       border-radius: 4px;
@@ -761,6 +761,11 @@
   .footer-column {
     width: 30%;
   }
+  footer .footer-column a {
+    color: white; /* Enlaces en color blanco */
+    text-decoration: none; /* Eliminar subrayado */
+    transition: color 0.3s ease; /* Transición suave (opcional) */
+}
   
   .footer-column h3 {
     text-align: center;
@@ -805,3 +810,6 @@
   .image-logo{
     width:50%;
   }
+  .logo-footer {
+    text-align: center;
+}

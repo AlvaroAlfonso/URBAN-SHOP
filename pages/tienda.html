@@ -2,11 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Urban&Shop</title>
+  <title>Urban & Shop</title>
   <link rel="stylesheet" href="/css/tienda.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Jomhuria&family=Lusitana&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jomhuria&family=Lusitana&display=swap" rel="stylesheet">
   
   <!-- Agrega esto en tu head -->
 <script src="https://sdk.mercadopago.com/js/v2"></script>
@@ -22,16 +23,16 @@
     <div class="ticker">
       COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN  COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN  
     </div>
-  </header>
+  
 
   <!-- Barra de navegación -->
   <nav class="nav-bar">
-    <img src="/Assets/images/LogoUrbanShop.png" alt="Logo Urban&Shop" class="logo-img">
+    <img src="/Assets/images/Logo.png" alt="Logo Urban&Shop" class="logo-img">
     <div class="logo"></div>
     <ul class="nav-links">
       <li><a href="/index.html">INICIO</a></li>
       <li><a href="/pages/nosotros.html">SOBRE NOSOTROS</a></li>
-      <li><a href="/pages/tienda.html">ÚLTIMA MODA</a></li>
+      <li><a href="/pages/tienda.html"class="contact-button">ÚLTIMA MODA</a></li>
       <li><a href="/pages/blog.html">BLOG</a></li>
       <li><a href="#">CONTÁCTANOS</a></li>
     </ul>
@@ -40,6 +41,7 @@
         🛒 <span id="cart-count">0</span>
       </div>
     </nav>
+  </header>
     
     
     <!-- Modal del Carrito -->
@@ -58,21 +60,17 @@
     </div>
     <div class="overlay"></div>
     
-  <!-- Banner principal -->
-  <section class="hero banner">
-    <div class="hero-text">
-      <h1>MODA QUE TRANSFORMA,<br>HISTORIAS QUE INSPIRAN.</h1>
-      <p>URBAN&SHOP</p>
-    </div>
-    <div class="hero-img">
-      <img src="/Assets/images/bannerImg.png" alt="Modelo Urban Shop">
-      
-    </div>
     
   </section>
-  <!-- Línea divisoria -->
-  <hr class="linea-divisoria">
-
+  <section class="banner">
+    <div class="banner-content">
+        <h1>MODA QUE TRANSFORMA,<br>HISTORIAS QUE INSPIRAN.</h1>
+        <p>URBAN & SHOP</p>
+    </div>
+    <div class="banner-image">
+        <img src="/Assets/images/BannerTienda.png" alt="Imagen del Banner"> 
+    </div>
+</section>
  <!-- Sección de descuentos -->
  <section class="seccion-productos">
     
@@ -106,13 +104,13 @@
       <div class="producto">
         <div class="favorito">♥</div>
         <span class="etiqueta-descuento">20% OFF</span>
-        <img src="/Assets/images/producto1.png" alt="Producto 1">
+        <img src="/Assets/images/producto1.jpeg" alt="Producto 1">
         <h3>Gorra en tela cubre sol</h3>
         <p class="categoria">ACCESORIOS</p>
       
         <div class="precios">
-          <span class="precio-original">$50.000</span>
-          <span class="precio-descuento">$40.000</span>
+          <span class="precio-original">$120.000</span>
+          <span class="precio-descuento">$96.000</span>
         </div>
       
         
@@ -129,23 +127,27 @@
         
       
       <button class="btn-carrito" 
-      data-producto='{"nombre": "Gorra en tela cubre sol", "precio": 40000, "imagen": "/Assets/images/producto1.png"}' 
-      onclick="event.preventDefault(); agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)">
+  data-producto='{
+    "nombre": "Chaqueta de Mezclilla con Tachuelas",
+    "precio": 96000,
+    "imagen": "/Assets/images/producto1.jpeg"
+  }' 
+  onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
     <i class="fas fa-shopping-cart"></i>
-  </button>
+</button>
       </div>
     </div>
       <!-- producto 2-->
      <div class="producto">
         <div class="favorito">♥</div>
         <span class="etiqueta-descuento">30% OFF</span>
-        <img src="/Assets/images/producto2.png" alt="Pendientes personalizados">
-        <h3>Aretes en madera diseño </h3>
-        <p class="categoria">ACCESORIOS</p>
+        <img src="/Assets/images/producto2.jpg" alt="Pendientes personalizados">
+        <h3>Chaqueta Inflable Transparente </h3>
+        <p class="categoria">ROPA</p>
       
         <div class="precios">
-          <span class="precio-original">$50.000</span>
-          <span class="precio-descuento">$35.000</span>
+          <span class="precio-original">$90.000</span>
+          <span class="precio-descuento">$63.000</span>
         </div>
       
         <div class="cantidad-producto">
@@ -158,11 +160,16 @@
                 <i class="fas fa-eye"></i>
             </a>
           
-          <button class="btn-carrito" 
-                  data-producto='{"nombre": "Aretes en madera diseño", "precio": 35000, "imagen": "/Assets/images/producto2.png"}' 
-                  onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
-            <i class="fas fa-shopping-cart"></i>
+            <button class="btn-carrito" 
+            data-producto='{
+              "nombre": "Chaqueta Inflable Transparente",
+              "precio": 63000,
+              "imagen": "/Assets/images/producto2.jpg"
+            }' 
+            onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+              <i class="fas fa-shopping-cart"></i>
           </button>
+          
     </div>
   </div>
   
@@ -170,13 +177,13 @@
      <div class="producto">
         <div class="favorito">♥</div>
         <span class="etiqueta-descuento">50% OFF</span>
-        <img src="/Assets/images/producto3.jpg" alt="Gorra figuras">
-        <h3>Gorra negro transformado</h3>
-        <p class="categoria">ACCESORIOS</p>
+        <img src="/Assets/images/producto3.webp" alt="Gorra figuras">
+        <h3>Pantalón con Flecos Beige</h3>
+        <p class="categoria">ROPA</p>
       
         <div class="precios">
-          <span class="precio-original">$50.000</span>
-          <span class="precio-descuento">$25.000</span>
+          <span class="precio-original">$100.000</span>
+          <span class="precio-descuento">$50.000</span>
         </div>
       
         <div class="cantidad-producto">
@@ -189,11 +196,15 @@
                 <i class="fas fa-eye"></i>
             </a>
       
-        <button class="btn-carrito" 
-        data-producto='{"nombre": "Gorra negro happy transformado", "precio": 25000, "imagen": "/Assets/images/producto3.jpg"}' 
-        onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
-        <i class="fas fa-shopping-cart"></i>
-        </button>
+            <button class="btn-carrito" 
+            data-producto='{
+              "nombre": "Pantalón con Flecos Beige",
+              "precio": 50000,
+              "imagen": "/Assets/images/producto3.webp"
+            }' 
+            onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+              <i class="fas fa-shopping-cart"></i>
+          </button>
 
     </div>
   </div>
@@ -205,7 +216,7 @@
   <!-- Sección de colección urbana reciclada -->
 <section class="coleccion-urbana">
     
-    <h2 class="titulo-coleccion">COLECCIÓN URBANA RECICLADA QUE ROME ESQUEMAS</h2>
+    <h2 class="titulo-coleccion">COLECCIÓN URBANA RECICLADA QUE ROMPE ESQUEMAS</h2>
     <p class="descripcion-coleccion">
       Viste con estilo y conciencia con nuestra <span class="resaltado">nueva colección</span> de ropa <span class="resaltado">reciclada urbana</span>.
       Prendas creadas con <span class="resaltado">pasión y respeto por el planeta</span>, que te permiten expresar tu 
@@ -217,7 +228,7 @@
       <!-- Producto 1 -->
       <div class="producto">
         <div class="favorito">♥</div>
-        <img src="/Assets/images/producto4.png" alt="Body negro silueta">
+        <img src="/Assets/images/producto4.webp" alt="Body negro silueta">
         <h3>Body negro silueta</h3>
         <p class="categoria">ROPA</p>
         <span class="precio">$45.000</span>
@@ -232,7 +243,7 @@
               <i class="fas fa-eye"></i>
           </a>
         <button class="btn-carrito" 
-        data-producto='{"nombre": "Body negro silueta", "precio": 45000, "imagen": "/Assets/images/producto4.png"}' 
+        data-producto='{"nombre": "Body negro silueta", "precio": 45000, "imagen": "/Assets/images/producto4.webp}' 
         onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
         <i class="fas fa-shopping-cart"></i>
     </button>
@@ -242,7 +253,7 @@
       <!-- Producto 2 -->
       <div class="producto">
         <div class="favorito">♥</div>
-        <img src="/Assets/images/producto5.png" alt="Chaqueta impermeable clara">
+        <img src="/Assets/images/producto5.webp" alt="Chaqueta impermeable clara">
         <h3>Chaqueta impermeable</h3>
         <p class="categoria">ROPA</p>
         <span class="precio">$45.000</span>
@@ -257,7 +268,7 @@
             </a>
           
           <button class="btn-carrito" 
-                  data-producto='{"nombre": "Chaqueta impermeable", "precio": 45000, "imagen": "/Assets/images/producto5.png"}' 
+                  data-producto='{"nombre": "Chaqueta impermeable", "precio": 45000, "imagen": "/Assets/images/producto5.webp"}' 
                   onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
             <i class="fas fa-shopping-cart"></i>
           </button>
@@ -268,7 +279,7 @@
       <!-- Producto 3 -->
       <div class="producto">
         <div class="favorito">♥</div>
-        <img src="/Assets/images/producto6.png" alt="Falda short transformada ">
+        <img src="/Assets/images/producto6.webp" alt="Falda short transformada ">
         <h3>Falda short transformada </h3>
         <p class="categoria">ROPA</p>
         <span class="precio">$45.000</span>
@@ -283,7 +294,7 @@
             </a>
           
           <button class="btn-carrito" 
-                  data-producto='{"nombre": "Falda short transformada", "precio": 45000, "imagen": "/Assets/images/producto6.png"}' 
+                  data-producto='{"nombre": "Falda short transformada", "precio": 45000, "imagen": "/Assets/images/producto6.webp"}' 
                   onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
             <i class="fas fa-shopping-cart"></i>
           </button>
@@ -294,10 +305,10 @@
       <!--Producto 4-->
       <div class="producto">
         <div class="favorito">♥</div>
-        <img src="/Assets/images/producto7.png" alt="Chaqueta personalizada ADIDAS">
-        <h3>Chaqueta personalizada ADIDAS</h3>
+        <img src="/Assets/images/producto7.webp" alt="Chaqueta personalizada ADIDAS">
+        <h3>Chaqueta y Falda de Cuero</h3>
         <p class="categoria">ROPA</p>
-        <span class="precio">$85.000</span>
+        <span class="precio">$180.000</span>
         <div class="cantidad-producto">
             <button class="btn-menos" onclick="cambiarCantidad(this, -1)">-</button>
             <input type="number" value="1" min="1" class="input-cantidad">
@@ -308,18 +319,22 @@
                 <i class="fas fa-eye"></i>
             </a>
           
-          <button class="btn-carrito" 
-                  data-producto='{"nombre": "Chaqueta personalizada ADIDAS", "precio": 85000, "imagen": "/Assets/images/producto7.png"}' 
-                  onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
-            <i class="fas fa-shopping-cart"></i>
+            <button class="btn-carrito" 
+            data-producto='{
+              "nombre": "Chaqueta de Cuero con Fuego y Falda de Cuero",
+              "precio": 180000,
+              "imagen": "/Assets/images/producto7.webp"
+            }' 
+            onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
+              <i class="fas fa-shopping-cart"></i>
           </button>
         </div>
       </div>
       <!--Producto 5-->
       <div class="producto">
         <div class="favorito">♥</div>
-        <img src="/Assets/images/producto8.jpg" alt="Pantalon Estilo Campana rosa">
-        <h3>Pantalon Jean Estilo Campana rosa</h3>
+        <img src="/Assets/images/producto8.webp" alt="Pantalon Estilo Campana rosa">
+        <h3>Pantalon Jean Estilo Campana</h3>
         <p class="categoria">ROPA</p>
         <span class="precio">$85.000</span>
         <div class="cantidad-producto">
@@ -333,7 +348,7 @@
             </a>
           
           <button class="btn-carrito" 
-                  data-producto='{"nombre": "Pantalon Estilo Campana rosa", "precio": 85000, "imagen": "/Assets/images/producto8.jpg}' 
+                  data-producto='{"nombre": "Pantalon Estilo Campana ", "precio": 85000, "imagen": "/Assets/images/producto8.webp' 
                   onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
             <i class="fas fa-shopping-cart"></i>
           </button>
@@ -343,7 +358,7 @@
       <!--Producto 6-->
       <div class="producto">
         <div class="favorito">♥</div>
-        <img src="/Assets/images/producto9.png" alt="Chaqueta jeans y tela dama">
+        <img src="/Assets/images/producto9.webp" alt="Chaqueta jeans y tela dama">
         <h3>Chaqueta estampada en jean dama</h3>
         <p class="categoria">ROPA</p>
         <span class="precio">$85.000</span>
@@ -358,7 +373,7 @@
             </a>
           
           <button class="btn-carrito" 
-                data-producto='{"nombre": "Chaqueta jeans y tela dama", "precio": 85000, "imagen": "/Assets/images/producto9.png"}' 
+                data-producto='{"nombre": "Chaqueta jeans y tela dama", "precio": 85000, "imagen": "/Assets/images/producto9.webp"}' 
                 onclick='agregarAlCarrito(JSON.parse(this.dataset.producto).nombre, JSON.parse(this.dataset.producto).precio, JSON.parse(this.dataset.producto).imagen, this)'>
             <i class="fas fa-shopping-cart"></i>
           </button>
@@ -559,14 +574,15 @@
               <a href="#"><i class="fab fa-tiktok"></i></a>
           </div>
       </div>
-      <div class="footer-column  style">
-          <h3>MENU</h3>
-          <p>INICIO</p>
-          <p>QUIENES SOMOS</p>
-          <p>ULTIMO EN MODA</p>
-          <p>BLOG</p>
-          <p>CONTACTANOS</p>
-      </div>
+      <div class="footer-column style">
+        <h3>MENU</h3>
+        <!-- Añadidos los enlaces en el footer -->
+        <p><a href="/index.html">INICIO</a></p>
+        <p><a href="/pages/nosotros.html">QUIENES SOMOS</a></p>
+        <p><a href="/pages/tienda.html">ÚLTIMO EN MODA</a></p>
+        <p><a href="/pages/blog.html">BLOG</a></p>
+        <p><a href="#">CONTACTANOS</a></p>
+    </div>
   </div>
   <div class="copyright">
       © 2025 URBAN&SHOP COPYRIGHT
@@ -575,8 +591,10 @@
 
 <!-- Agregar FontAwesome para iconos -->
 <script src="https://kit.fontawesome.com/a7208eb71d.js" crossorigin="anonymous"></script>
+
 <!-- Enlace al archivo JavaScript -->
 <script src="/.dist/cart.js"></script>
+<script src="/script.js"></script>
 <script src="/.dist/detail.js"></script>
 </body>
 </html>

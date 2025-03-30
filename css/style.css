@@ -15,7 +15,7 @@ body {
 
 
 
-/* Header */
+
 /* Marquesina ticker */
 .marquesina {
     background-color: #0D8BB9;
@@ -84,10 +84,7 @@ body {
     transition: color 0.3s;
   }
  
-  .nav-links li a:hover {
-    color: #0D8BB9;
-  }
- 
+  
   .carrito {
     font-size: 20px;
     color: white;
@@ -149,8 +146,179 @@ body {
     transform: skew(-82deg);
     z-index: -1;
 }
+/*modal carrito*/
+/* Estilos del Carrito */
+.modal-carrito {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: white;
+    color: #333;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    font-size: 11px;
+  }
+  
+  .btn-eliminar {
+    background: none;
+    border: none;
+    color: #ff5252;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px;
+  }
+  
+  .btn-eliminar:hover {
+    color: #ff0000;
+  }
+  .contenido-carrito {
+    padding: 20px;
+  }
+  
+  .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .info-producto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+  }
+  
+  .info-producto img {
+    border-radius: 4px;
+  }
+  .cantidad-producto {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
 
-/* seccion quienes somos */
+.cantidad-producto button {
+  width: 30px;
+  height: 30px;
+  background: #0D8BB9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cantidad-producto button:hover {
+  background: #0a7ba3;
+}
+
+.cantidad-producto input {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+  .controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .controles-cantidad button {
+    background: #f0f0f0;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .controles-cantidad button:hover {
+    background: #ddd;
+  }
+  
+  .btn-eliminar {
+    color: #ff5252;
+    margin-left: 10px;
+  }
+  
+  #carrito-resumen {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  .btn-finalizar {
+    width: 100%;
+    padding: 10px;
+    background: #0D8BB9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn-finalizar:hover {
+    background: #0a7ba3;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  /* Notificación */
+  .notificacion {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0D8BB9;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .notificacion.mostrar {
+    opacity: 1;
+  }
+  /*Ojo detalle producto*/
+  
+  /* Contenedor para los botones finales */
+.controles-finales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px;
+}
+
 
 
 .seccion-quienes-somos {
@@ -505,7 +673,11 @@ footer {
     padding-bottom: 30px;
     
 }
-
+footer .footer-column a {
+    color: white; /* Enlaces en color blanco */
+    text-decoration: none; /* Eliminar subrayado */
+    transition: color 0.3s ease; /* Transición suave (opcional) */
+}
 .footer-column {
     width: 30%;
 }
@@ -552,4 +724,7 @@ footer {
 
 .image-logo{
     width:50%;
+}
+.logo-footer {
+    text-align: center;
 }

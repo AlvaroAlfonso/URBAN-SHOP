@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<header lang="es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,23 @@
           </div>
         </nav>
     </header>
+     <!-- Modal del Carrito -->
+     <div id="modalCarrito" class="modal-carrito">
+        <div class="contenido-carrito">
+          <span class="close-btn" onclick="cerrarCarrito()">&times;</span>
+          <h2>Tu Carrito</h2>
+          <div id="carrito-items"></div>
+          <hr>
+          <div id="carrito-resumen">
+            <p>Subtotal: <span id="subtotal">$0</span></p>
+            <p>Total: <span id="total">$0</span></p>
+            <button class="btn-finalizar">Finalizar Compra</button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      
+      
       
     <section class="banner">
         <div class="banner-content">
@@ -125,12 +142,24 @@
         </div>
         <div class="contactanos-derecha">
             <form>
-                <input type="text" placeholder="Nombre" class="input-animado">
-                <input type="tel" placeholder="Número telefónico" class="input-animado">
-                <input type="email" placeholder="Correo electrónico" class="input-animado">
-                <textarea placeholder="Mensaje" class="input-animado"></textarea>
+                <input type="text" id="nombre" placeholder="Nombre" class="input-animado">
+                <div id="mensaje-nombre"></div>
+                
+                <input type="text" id="apellidos" placeholder="Apellidos" class="input-animado">
+                <div id="mensaje-apellidos"></div>
+                
+                <input type="tel" id="telefono" placeholder="Número telefónico" class="input-animado">
+                <div id="mensaje-telefono"></div>
+                
+                <input type="email" id="correo" placeholder="Correo electrónico" class="input-animado">
+                <div id="mensaje-correo"></div>
+                
+                <textarea id="mensaje" placeholder="Mensaje" class="input-animado"></textarea>
+                <div id="mensaje-mensaje"></div>
+                
                 <button type="submit">ENVIAR AHORA</button>
             </form>
+            
         </div>
     </section>
     <footer>
@@ -152,19 +181,23 @@
                     <a href="#"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
-            <div class="footer-column  style">
+            <div class="footer-column style">
                 <h3>MENU</h3>
-                <p>INICIO</p>
-                <p>QUIENES SOMOS</p>
-                <p>ULTIMO EN MODA</p>
-                <p>BLOG</p>
-                <p>CONTACTANOS</p>
+                <!-- Añadidos los enlaces en el footer -->
+                <p><a href="/index.html">INICIO</a></p>
+                <p><a href="/pages/nosotros.html">QUIENES SOMOS</a></p>
+                <p><a href="/pages/tienda.html">ÚLTIMO EN MODA</a></p>
+                <p><a href="/pages/blog.html">BLOG</a></p>
+                <p><a href="#">CONTACTANOS</a></p>
             </div>
         </div>
         <div class="copyright">
             © 2025 URBAN&SHOP COPYRIGHT
         </div>
     </footer>
+    <script src=".dist/formcontact.js"></script>
+    <script src="/.dist/cart.js"></script>
+    <script src="/.dist/detail.js"></script>
     <script src="/script.js"></script>
     <script src="https://kit.fontawesome.com/a0fe0f97f9.js" crossorigin="anonymous"></script>
 </body>
