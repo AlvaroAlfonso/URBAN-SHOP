@@ -31,8 +31,8 @@
     <div class="logo"></div>
     <button class="hamburger" id="hamburger">
       <i class="fas fa-bars"></i>
-  </button>
-   <ul class="nav-links" >
+    </button>
+   <ul class="nav-links" id="nav-links">
       <li><a href="/index.html">INICIO</a></li>
       <li><a href="/pages/nosotros.html">SOBRE NOSOTROS</a></li>
       <li><a href="/pages/tienda.html"class="contact-button">ÚLTIMA MODA</a></li>
@@ -43,7 +43,11 @@
     <div class="carrito" onclick="mostrarCarrito()">
         🛒 <span id="cart-count">0</span>
       </div>
-    
+      <div class="accessibility-controls">
+        <button id="increase-font">A+</button>
+        <button id="decrease-font">A-</button>
+        <button id="toggle-contrast"><i class="fa-solid fa-circle-half-stroke"></i></button>
+    </div>
     </nav>
   </header>
     
@@ -68,7 +72,7 @@
   </section>
   <section class="banner">
     <div class="banner-content">
-        <h1>MODA QUE TRANSFORMA</h1>
+        <h1>RENUEVA TU ARMARIO</h1>
         <p>URBAN & SHOP</p>
     </div>
     <div class="banner-image">
@@ -603,11 +607,7 @@
 
 <!-- Enlace al archivo JavaScript -->
 <script src="/.dist/cart.js"></script>
-
 <script src="/.dist/detail.js"></script>
-
 <script src ="/.dist/hamburger.js"></script>
-<script src="/.dist/search.js"></script>
-<script src="/.dist/breadcrumb.js"></script>
 </body>
 </html>

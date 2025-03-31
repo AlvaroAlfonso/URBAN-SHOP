@@ -30,7 +30,106 @@ body {
     font-size: 14px;
   }
   
-    
+  
+/* Estilos para los controles de accesibilidad */
+.accessibility-controls {
+  position: fixed;
+  top: 450px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.accessibility-controls button {
+  background-color: #17b6eb; /* Verde */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.accessibility-controls button:hover {
+  background-color: #00fff2;
+}
+
+/* Estilos para el modo de alto contraste y daltonismo */
+body.high-contrast {
+  background-color: #ffffff; /* Gris oscuro */
+  color: #ffd900; /* Gris claro */
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3 {
+  color: #00ff08; /* Azul claro */
+}
+body.high-contrast .seccion-quienes-somos {
+  background-color: rgba(0, 0, 0, 0.49);
+}
+
+body.high-contrast .ultimo-moda{
+  background-color: rgba(0, 0, 0, 0.49);
+}
+
+body.high-contrast a {
+  color: #ffd900; /* Verde claro */
+}
+
+body.high-contrast button,
+body.high-contrast .boton,
+body.high-contrast .card button {
+  background-color: #c8ff00; /* Azul */
+  color: #0400ff;
+  border: 1px solid #09ff00;
+}
+
+body.high-contrast button:hover,
+body.high-contrast .boton:hover,
+body.high-contrast .card button:hover {
+  background-color: #ff00ea;
+}
+
+body.high-contrast .nav-bar,
+body.high-contrast .modal-carrito,
+body.high-contrast .contactanos-derecha form,
+body.high-contrast footer {
+  background-color: #137013; /* Gris azulado oscuro */
+}
+
+body.high-contrast .banner::before {
+  background-color: #137013; /* Azul más intenso */
+}
+
+body.high-contrast .carrito {
+  color: #00f7ff; /* Verde claro */
+}
+
+body.high-contrast .card {
+  background-color: rgba(0, 255, 64, 0.7); /* Gris azulado oscuro con transparencia */
+}
+
+img {
+  filter: contrast(120%);
+}
+
+body.high-contrast img {
+  filter: contrast(150%);
+}
+body.high-contrast .detalle-producto{
+  background-color: #fff;
+}
+
+body.high-contrast .informacion-producto{
+  background-color: #00000057;
+}
+
+.banner::before {
+  background-color: #1E88E5;
+}
   @keyframes ticker-scroll {
     0% {
       transform: translateX(100%);
@@ -68,7 +167,7 @@ body {
     color: white;
     text-decoration: none;
     font-family: 'Jomhuria', cursive;
-    font-size: 20px;
+    font-size: 2em;
     transition: color 0.3s;
 }
 
@@ -77,7 +176,7 @@ body {
 }
 
 .carrito {
-    font-size: 20px;
+    font-size: 1em;
     color: white;
     cursor: pointer;
 }
@@ -225,6 +324,15 @@ border-radius: 4px;
   z-index: 999;
 }
 
+.hamburger {
+  display: none; /* Oculto en pantallas grandes */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
 /* Notificación */
 .notificacion {
   position: fixed;
@@ -370,26 +478,26 @@ border-radius: 4px;
 }
   
   h1 {
-    font-size: 2rem;
+    font-size: 1em;
     margin-bottom: 10px;
     color: #fff;
   }
   
   .precio {
-    font-size: 1.5rem;
+    font-size: 1em;
     color: #ffffff;
     margin-bottom: 20px;
   }
   
   label {
-    font-size: 1.2rem;
+    font-size: 1em;
     margin-bottom: 10px;
     display: block;
   }
   
   select {
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1em;
     margin-bottom: 20px;
     background-color: #333;
     color: white;
@@ -404,7 +512,7 @@ border-radius: 4px;
   .acciones button {
     padding: 12px 30px;
     margin-right: 20px;
-    font-size: 1rem;
+    font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
     border: none;
@@ -450,7 +558,7 @@ border-radius: 4px;
   }
   
   #informacion li {
-    font-size: 1rem;
+    font-size: 1em;
     margin-bottom: 10px;
     
   }
@@ -532,3 +640,38 @@ border-radius: 4px;
     text-align: center;
 }
 
+@media (max-width: 768px){
+  .nav-links {
+    display: none; /* Oculta el menú en mobile */
+    flex-direction: column;
+    background-color: #000;
+    position: static;
+    top: 60px; /* Ajusta según la altura de tu barra de navegación */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    flex-grow: 1; /* Permite que el menú crezca para ocupar el espacio disponible */
+    z-index: 1000; 
+}
+
+
+.nav-links.active {
+    display: flex; /* Muestra el menú cuando está activo */
+}
+.nav-links li {
+    margin: 15px 0;
+}
+.hamburger {
+    display: block; /* Muestra el botón hamburguesa en mobile */
+}
+.logo-img {
+    width: 15%; /* Ajusta el tamaño del logo para mobile */
+}
+.nav-bar {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+  .div .detalle-contenido{
+    background-color: blue;
+  }
+}

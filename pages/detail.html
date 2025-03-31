@@ -20,11 +20,14 @@
     <div class="ticker">
       COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN
     </div>
-  </header>
+  
   <!-- Barra de navegación -->
   <nav class="nav-bar">
-    <img src="/Assets/images/LogoUrbanShop.png" alt="Logo Urban&Shop" class="logo-img">
-    <ul class="nav-links">
+    <img src="/Assets/images/Logo.png" alt="Logo Urban&Shop" class="logo-img">
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+  </button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="/index.html"><i class="fas fa-home"></i></a></li>
 
         <!-- Icono de ofertas (Etiqueta de descuento) -->
@@ -37,15 +40,13 @@
     <div class="carrito" onclick="mostrarCarrito()">
       🛒 <span id="cart-count">0</span>
     </div>
+    <div class="accessibility-controls">
+      <button id="increase-font">A+</button>
+      <button id="decrease-font">A-</button>
+      <button id="toggle-contrast"><i class="fa-solid fa-circle-half-stroke"></i></button>
+  </div>
   </nav>
-  <section class="breadcrumbs">
-    <div class="container">
-      <a href="/index.html">Inicio</a> &gt; 
-      <a href="/pages/tienda.html">Última Moda</a> &gt; 
-      <span id="producto-nombre"></span> <!-- Aquí se pondrá el nombre del producto -->
-    </div>
-  </section>
-  
+  </header>
   <!-- Modal del Carrito -->
   <div id="modalCarrito" class="modal-carrito">
     <div class="contenido-carrito">
@@ -118,7 +119,7 @@
     <div class="footer-content">
         <div class="footer-column">
             <div class="logo-footer">
-                <img src="/Assets/images/LogoUrbanShop.png" alt="" class="image-logo">
+                <img src="/Assets/images/Logo.png" alt="" class="image-logo">
             </div>
             <p>La moda puede cambiar el mundo. En URBAN&SHOP creemos en un futuro más sostenible. Cada prenda que creamos es una declaración de amor por el planeta y por la moda.</p>
         </div>
@@ -152,8 +153,6 @@
 <script src="https://kit.fontawesome.com/a7208eb71d.js" crossorigin="anonymous"></script>
 <script src="/.dist/detail.js"></script>
 <script src="/.dist/cart.js"></script>
-<script src="/.dist/search.js"></script>
-<script src="/.dist/breadcrumb.js"></script>
 
 </body>
 </html>
