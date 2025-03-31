@@ -818,7 +818,7 @@
 
 /* Mobile Styles (max-width: 768px) */
 @media (max-width: 768px) {
-  nav-links {
+  .nav-links {
     display: none; /* Oculta el menú en mobile */
     flex-direction: column;
     background-color: #000;

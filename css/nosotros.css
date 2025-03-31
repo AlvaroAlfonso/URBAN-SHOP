@@ -616,7 +616,7 @@ footer .footer-column a {
       text-align: center;
   }
 
-  .nav-links.show {
+  .nav-links.active {
       display: flex; /* Mostrar cuando se active el menú */
   }
 

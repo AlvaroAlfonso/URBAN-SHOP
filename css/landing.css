@@ -24,6 +24,15 @@ body {
     position: relative;
     letter-spacing: 2px;
   }
+  * Estilos para el botón hamburguesa */
+.hamburger {
+    display: none; /* Oculto en pantallas grandes */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
  
   .ticker {
     display: inline-block;
@@ -452,4 +461,137 @@ footer {
 
 .image-logo{
     width:50%;
+}
+
+/* Estilos para el menú en mobile */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Oculta el menú en mobile */
+      flex-direction: column;
+      background-color: #000;
+      position: static;
+      top: 60px; /* Ajusta según la altura de tu barra de navegación */
+      left: 0;
+      width: 100%;
+      text-align: center;
+      flex-grow: 1; /* Permite que el menú crezca para ocupar el espacio disponible */
+      z-index: 1000; 
+  }
+
+
+  .nav-links.active {
+      display: flex; /* Muestra el menú cuando está activo */
+  }
+  .nav-links li {
+      margin: 15px 0;
+  }
+  .hamburger {
+      display: block; /* Muestra el botón hamburguesa en mobile */
+  }
+  .logo-img {
+      width: 15%; /* Ajusta el tamaño del logo para mobile */
+  }
+  .nav-bar {
+      flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  }
+  /* footer */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-column {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.image-logo {
+    width: 70%;
+}
+
+.fab {
+    font-size: 35px;
+}
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .creacion-landing {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .seccion-izquierda, .right-section {
+      width: 100%;
+  }
+
+  .titulo-landing h1 {
+      font-size: 2em;
+  }
+
+  .slider-container {
+      width: 100%;
+      height: auto;
+      display: none;
+  }
+
+  .slide {
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+  }
+
+  .slide img {
+      width: 100%;
+      height: auto;
+  }
+
+  .products-button {
+      width: 90%;
+      padding: 10px 20px;
+      font-size: 1em;
+  }
+  .image-fondo img{
+    width: 290px;
+  }
+  .right-section {
+    padding: 10px;
+}
+}
+
+/* Tablet Styles (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .creacion-landing {
+      padding: 30px;
+  }
+
+  .seccion-izquierda, .right-section {
+      width: 48%;
+  }
+
+  .slider-container {
+      width: 700px;
+      height: 300px;
+  }
+
+  .slide {
+      width: 700px;
+      height: 250px;
+  }
+
+  .slide img {
+      width: 233px;
+  }
+  .footer-content {
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 45%;
+    margin-bottom: 30px;
+}
+
+.footer-column:last-child {
+    width: 100%;
+}
 }

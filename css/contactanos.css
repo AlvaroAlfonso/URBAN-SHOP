@@ -32,6 +32,14 @@ body {
     animation: ticker-scroll 30s linear infinite;
     font-size: 14px;
   }
+
+  /* Hamburguesa */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
  
   .contact-button{
     background-color: #0D8BB9;
@@ -564,4 +572,170 @@ footer {
 
 .image-logo {
     width: 50%;
+}
+
+/* ... (Tu CSS existente) ... */
+
+/* Hamburguesa */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+/* Responsive para mobile */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 10;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      padding: 15px 0;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .logo-img {
+    width: 15%;
+  }
+}
+
+/* Media Queries */
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .banner {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .banner-content h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+  }
+
+  .banner-content p {
+      font-size: 18px;
+      letter-spacing: 10px;
+      text-align: center;
+  }
+
+  .banner-image {
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  .banner-image img {
+      width: 80%;
+      height: auto;
+  }
+
+  .banner::before {
+      transform: skew(-70deg);
+  }
+  /* estilos formulario */
+  .contactanos {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.contactanos-izquierda, .contactanos-derecha {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.contactanos-izquierda {
+    height: auto;
+    padding: 20px;
+}
+
+.contactanos-izquierda h2 {
+    font-size: 2em;
+}
+
+.contactanos-derecha form {
+    transform: translateY(0);
+    padding: 20px;
+}
+
+/* estilos footer */
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-column {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.image-logo {
+  width: 70%;
+}
+
+.fab {
+  font-size: 35px;
+}
+}
+
+/* Tablet Styles (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .banner {
+      padding: 30px;
+  }
+
+  .banner-content h1 {
+      font-size: 60px;
+  }
+
+  .banner-content p {
+      font-size: 20px;
+      letter-spacing: 20px;
+  }
+
+  .banner-image img {
+      width: 300px;
+      height: 400px;
+  }
+  /* estilos formulario */
+  .contactanos {
+    padding: 30px;
+}
+
+.contactanos-izquierda, .contactanos-derecha {
+    width: 45%;
+}
+
+.contactanos-derecha form {
+    transform: translateY(30px);
+}
+
+/* estilos footer*/
+.footer-content {
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 45%;
+  margin-bottom: 30px;
+}
+
+.footer-column:last-child {
+  width: 100%;
+}
 }
