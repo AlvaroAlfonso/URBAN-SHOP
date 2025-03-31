@@ -280,7 +280,6 @@ body {
     padding: 50px;
     position: relative;
     overflow: hidden; /* Para ocultar el desbordamiento del romboide */
-    border-bottom: 1px solid #FFFFFF;
 }
 
 .banner-content {

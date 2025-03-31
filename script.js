@@ -3,9 +3,6 @@ const corazones = document.querySelectorAll('.corazon');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
 
 
 botonVerMas.addEventListener('mouseout', () => {
@@ -16,4 +13,12 @@ corazones.forEach(corazon => {
     corazon.addEventListener('click', () => {
         corazon.classList.toggle('active');
     });
+});
+
+botonVerMas.addEventListener('mouseout', () => {
+    botonVerMas.style.transform = 'scale(1)';
+});
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });

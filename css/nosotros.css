@@ -21,6 +21,14 @@ body {
     position: relative;
     letter-spacing: 2px;
   }
+
+/* Menú hamburguesa */
+.hamburger{
+  display: none; /* Ocultar en pantallas grandes */
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
  
   .ticker {
     display: inline-block;
@@ -269,7 +277,7 @@ body {
     padding: 50px;
     position: relative;
     overflow: hidden; /* Para ocultar el desbordamiento del romboide */
-    border-bottom: 1px solid #FFFFFF;
+    
 }
 
 .banner-content {
@@ -593,4 +601,271 @@ footer .footer-column a {
 }
 .logo-footer {
     text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Ocultar en pantallas pequeñas */
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 60px; /* Ajusta según la altura de tu barra de navegación */
+      left: 0;
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-links.show {
+      display: flex; /* Mostrar cuando se active el menú */
+  }
+
+  .nav-links li {
+      padding: 15px 0;
+  }
+
+  .menu-hamburguesa {
+      display: block; /* Mostrar en pantallas pequeñas */
+  }
+
+  /* diseño banner */
+  .banner {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.banner-content h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.banner-content p {
+    font-size: 18px;
+    letter-spacing: 0.5em;
+}
+
+.banner-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.banner-image img {
+    width: 80%;
+    height: auto;
+}
+
+.banner::before {
+    left: -50%;
+    width: 200%;
+    transform: skew(-70deg);
+}
+/* Estilos de banner nuestra historia */
+.seccion-nuestra-historia {
+  flex-direction: column;
+  padding: 20px;
+}
+
+.contenido-nuestra-historia {
+  width: 100%;
+  height: auto;
+  background-size: 80% auto;
+}
+
+.contenido-nuestra-historia h2 {
+  font-size: 1.8em;
+}
+
+.contenido-nuestra-historia p {
+  font-size: 0.9em;
+}
+
+.imagen-nuestra-historia img {
+  width: 90%;
+  height: auto;
+}
+/* Seccion moda expresion */
+.moda-expresion {
+  padding: 30px 15px;
+}
+
+.moda-expresion h2 {
+  font-size: 1.8em;
+}
+
+.moda-expresion p {
+  font-size: 0.9em;
+}
+
+.columna-imagenes img {
+  width: 100%;
+}
+
+.boton-ver-mas {
+  width: 90%;
+}
+/* nuestros valores */
+.nuestros-valores {
+  padding: 30px 15px;
+}
+
+.nuestros-valores h2 {
+  font-size: 1.8em;
+}
+
+.nuestros-valores p {
+  font-size: 0.9em;
+}
+
+.vision-mision {
+  flex-direction: column;
+  gap: 30px;
+  align-items:center;
+}
+
+.vision, .mision {
+  width: 90%;
+  height: auto;
+}
+/* seccion footer */
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-column {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  font-size: 1.3em;
+}
+
+.footer-column p {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.social-icons {
+  gap: 15px;
+}
+
+.fab {
+  font-size: 30px;
+}
+
+.image-logo {
+  width: 80%;
+}
+}
+
+/* Tablet Styles (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .banner {
+      padding: 30px;
+  }
+
+  .banner-content h1 {
+      font-size: 70px;
+  }
+
+  .banner-content p {
+      font-size: 20px;
+      letter-spacing: 0.8em;
+  }
+
+  .banner-image img {
+      width: 300px;
+      height: 400px;
+  }
+
+  .banner::before {
+      left: -30%;
+      width: 190%;
+  }
+  /* seccion nuestra historia */
+  .seccion-nuestra-historia {
+    padding: 30px;
+}
+
+.contenido-nuestra-historia {
+    width: 60%;
+    height: auto;
+}
+
+.contenido-nuestra-historia h2 {
+    font-size: 2em;
+}
+
+.contenido-nuestra-historia p {
+    font-size: 1em;
+}
+
+.imagen-nuestra-historia img {
+    width: 80%;
+    height: auto;
+}
+/* seccion moda expresion */
+.moda-expresion {
+  padding: 40px 20px;
+}
+
+.moda-expresion h2 {
+  font-size: 2em;
+}
+
+.moda-expresion p {
+  font-size: 1em;
+}
+
+.columna-imagenes img {
+  width: 45%;
+}
+
+.boton-ver-mas {
+  width: 60%;
+}
+/* nuestros valores */
+.nuestros-valores {
+  padding: 40px 20px;
+}
+
+.nuestros-valores h2 {
+  font-size: 2em;
+}
+
+.nuestros-valores p {
+  font-size: 1em;
+}
+
+.vision-mision {
+  gap: 40px;
+}
+
+.vision, .mision {
+  width: 45%;
+  height: auto;
+}
+
+/* seccion footer */
+.footer-content {
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 45%;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  font-size: 1.4em;
+}
+
+.footer-column p {
+  font-size: 1em;
+}
+
+.image-logo {
+  width: 60%;
+}
 }

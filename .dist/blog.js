@@ -5,6 +5,7 @@ let indiceActual = 0;
 const intervalo = 3000; // Cambia cada 3 segundos
 const blogPosts = document.querySelectorAll('.blog-post'); // Selecciona todos los artículos
 
+
 blogPosts.forEach(post => {
   const likeButton = post.querySelector('.like-button');
   const likeCount = post.querySelector('.like-count');
@@ -67,3 +68,14 @@ function iniciarCarrusel() {
 }
 
 iniciarCarrusel();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('active'); // Opcional: para animar el icono de hamburguesa
+  });
+});

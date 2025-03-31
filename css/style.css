@@ -24,6 +24,16 @@ body {
     position: relative;
     letter-spacing: 2px;
   }
+
+/* Estilos para el botón hamburguesa */
+.hamburger {
+    display: none; /* Oculto en pantallas grandes */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
  
   .ticker {
     display: inline-block;
@@ -100,7 +110,7 @@ body {
     padding: 50px;
     position: relative;
     overflow: hidden; /* Para ocultar el desbordamiento del romboide */
-    border-bottom: 1px solid #FFFFFF;
+   
 }
 
 .banner-content {
@@ -310,15 +320,6 @@ body {
   }
   /*Ojo detalle producto*/
   
-  /* Contenedor para los botones finales */
-.controles-finales {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Espacio entre los botones */
-    margin-top: 10px;
-}
-
 
 
 .seccion-quienes-somos {
@@ -338,7 +339,7 @@ body {
     display: flex;
     text-align: center;
     width: 50%;
-    background-image: url('/Assets/images/fondo-metal.png');
+    background-image: url('/images/fondo-metal.png');
     background-color: rgba(0, 0, 0, 0.836);
     padding: 20px;
     box-sizing: border-box;
@@ -393,28 +394,6 @@ body {
     width: 400px;
     height: 630px;
 }
-
-
-
-
-
-.corazon {
-    color: red;
-    border-radius: 300px;
-    padding: 5px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para la animación */
-}
-
-.corazon.active {
-    color: rgb(255, 0, 0); /* Color del corazón cuando está activo */
-    transform: scale(1.2) rotate(360deg); /* Aumenta el tamaño y rota el corazón */
-}
-
 /* ESTILOS PARA EL ULTIMO MODA*/
 .ultimo-moda {
     background-color: #000000; /* Color de fondo del banner */
@@ -600,12 +579,12 @@ body {
 }
 
 /* Fondos de las tarjetas (reemplaza con tus imágenes) */
-.card1 { background-image: url('/Assets/images/model1.png'); }
-.card2 { background-image: url('/Assets/images/model2.png'); }
-.card3 { background-image: url('/Assets/images/model3.png'); }
-.card4 { background-image: url('/Assets/images/model4.png'); }
-.card5 { background-image: url('/Assets/images/model5.png'); }
-.card6 { background-image: url('/Assets/images/model6.png'); }
+.card1 { background-image: url('/images/model1.png'); }
+.card2 { background-image: url('/images/model2.png'); }
+.card3 { background-image: url('/images/model3.png'); }
+.card4 { background-image: url('/images/model4.png'); }
+.card5 { background-image: url('/images/model5.png'); }
+.card6 { background-image: url('/images/model6.png'); }
 
 /* estilos contactanos formulario */
 
@@ -625,7 +604,7 @@ body {
     display: flex;
     text-align: center;
     width: 40%;
-    background-image: url('/Assets/images/imagen-robot-fondo.png'); /* Reemplaza con tu imagen */
+    background-image: url('/images/imagen-robot-fondo.png'); /* Reemplaza con tu imagen */
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
@@ -801,4 +780,247 @@ footer .footer-column a {
 }
 .logo-footer {
     text-align: center;
+}
+
+/* Estilos para el menú en mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Oculta el menú en mobile */
+        flex-direction: column;
+        background-color: #000;
+        position: static;
+        top: 60px; /* Ajusta según la altura de tu barra de navegación */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        flex-grow: 1; /* Permite que el menú crezca para ocupar el espacio disponible */
+        z-index: 1000; 
+    }
+
+
+    .nav-links.active {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+    .nav-links li {
+        margin: 15px 0;
+    }
+    .hamburger {
+        display: block; /* Muestra el botón hamburguesa en mobile */
+    }
+    .logo-img {
+        width: 15%; /* Ajusta el tamaño del logo para mobile */
+    }
+    .nav-bar {
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    }
+    
+    /* seccion-revoluciona*/
+    .seccion-quienes-somos {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contenido-quienes-somos {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        background-size: 80% auto;
+    }
+
+    .contenido-quienes-somos h2 {
+        font-size: 1.8em;
+    }
+
+    .contenido-quienes-somos p {
+        font-size: 0.9em;
+    }
+
+    .imagen-quienes-somos img {
+        width: 90%;
+        height: auto;
+    }
+
+    /* SECCION QUIENES SOMOS */
+    .ultimo-moda {
+        padding: 30px 10px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .paragraph {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .image-boxes {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .image-box {
+        width: 80%;
+        height: auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .boton {
+        width: 90%;
+    }
+
+    /*SECCION NUESTRA COMUNIDAD */
+    .nuestra-comunidad {
+        padding: 40px 15px;
+    }
+
+    .nuestra-comunidad h2 {
+        font-size: 1.8em;
+    }
+
+    .cards-comunidad {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.3em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    /* SECCION CONTACTANOS */
+    .contactanos {
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    .contactanos-izquierda {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .contactanos-izquierda h2 {
+        font-size: 1.8em;
+    }
+
+    .contactanos-derecha {
+        width: 100%;
+    }
+
+    .contactanos-derecha form {
+        padding: 30px;
+        transform: translateY(0);
+    }
+    /* SECCION FOOTER */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    .footer-column h3 {
+        font-size: 1.3em;
+    }
+
+    .footer-column p {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .fab {
+        font-size: 30px;
+    }
+
+    .image-logo {
+        width: 80%;
+    }
+}
+
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .banner-content h1 {
+        font-size: 60px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+        letter-spacing: 10px;
+        text-align: center;
+    }
+
+    .banner-image {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .banner-image img {
+        width: 80%;
+        height: auto;
+    }
+
+    .banner::before {
+        left: -50%;
+        width: 200%;
+        transform: skew(-70deg);
+    }
+}
+
+/* Tablet Styles (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .banner {
+        padding: 30px;
+    }
+
+    .banner-content h1 {
+        font-size: 90px;
+    }
+
+    .banner-content p {
+        font-size: 20px;
+        letter-spacing: 20px;
+    }
+
+    .banner-image img {
+        width: 300px;
+        height: 400px;
+    }
+
+    .banner::before {
+        left: -30%;
+        width: 190%;
+    }
 }

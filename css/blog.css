@@ -90,7 +90,20 @@ body {
     color: white;
     cursor: pointer;
   }
- 
+ /* Menú Hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.4s;
+}
 /*Banner estilos*/
 .banner {
     display: flex;
@@ -650,4 +663,185 @@ footer .footer-column a {
 }
 .logo-footer {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #000;
+      position: absolute;
+      top: 60px; /* Ajusta según la altura del nav-bar */
+      left: 0;
+      text-align: center;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      padding: 15px 0;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  .logo-img {
+      width: 15%; /* Ajusta el tamaño del logo para mobile */
+  }
+
+  /* estilos banner */
+  .banner {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.banner-content h1 {
+    font-size: 60px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.banner-content p {
+    font-size: 18px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.banner-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.banner-image img {
+    width: 80%;
+    height: auto;
+}
+
+.banner::before {
+    transform: skew(-70deg);
+}
+
+/* ESTILOS DEL TODO MAIN */
+.blog-post {
+  width: 100%;
+  margin-left: 0;
+  padding: 10px;
+}
+.titulo {
+  font-size: 1.8em;
+}
+.texto {
+  font-size: 1em;
+  margin: 10px;
+}
+.art-magiaReciclado, .contenedor-seccion, .contenedor-modaurban {
+  flex-direction: column;
+  padding: 20px;
+}
+.contenido-margia-reciclado, .contenido-moda-urbana {
+  width: 100%;
+}
+.imagen-margia-reciclado img {
+  width: 100%;
+  height: auto;
+}
+.contenedor-deslizador-3d {
+  margin-left: 0;
+  width: 100%;
+}
+.contenido-moda-urbana h3 {
+  font-size: 1.8em;
+}
+/* final mensaje */
+.lema-final h3 {
+  font-size: 2.0em;
+  margin: 20px;
+}
+
+.boton-ver-mas {
+  width: 90%;
+  height: 50px;
+  font-size: 1em;
+}
+/* estilos footer */
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-column {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.image-logo {
+  width: 70%;
+}
+
+.fab {
+  font-size: 35px;
+}
+}
+
+/* Tablet Styles (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .banner {
+      padding: 30px;
+  }
+
+  .banner-content h1 {
+      font-size: 90px;
+  }
+
+  .banner-content p {
+      font-size: 22px;
+      letter-spacing: 20px;
+  }
+
+  .banner-image img {
+      width: 300px;
+      height: 400px;
+  }
+  /* ESTILOS TODO MAIN */
+  .blog-post {
+    padding: 15px;
+}
+.art-magiaReciclado, .contenedor-seccion, .contenedor-modaurban {
+    padding: 30px;
+}
+.contenido-margia-reciclado, .contenido-moda-urbana {
+    width: 70%;
+}
+.contenedor-deslizador-3d {
+    margin-left: 50px;
+}
+
+/*final mensaje */
+.lema-final h3 {
+  font-size: 2.5em;
+  margin: 30px;
+}
+
+.boton-ver-mas {
+  width: 60%;
+  height: 55px;
+  font-size: 1.1em;
+}
+/* estilos footer */
+.footer-content {
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 45%;
+  margin-bottom: 30px;
+}
+
+.footer-column:last-child {
+  width: 100%;
+}
 }

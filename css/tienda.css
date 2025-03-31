@@ -813,3 +813,182 @@
   .logo-footer {
     text-align: center;
 }
+
+/* Media Queries */
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  nav-links {
+    display: none; /* Oculta el menú en mobile */
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura de tu barra de navegación */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    flex-grow: 1; /* Permite que el menú crezca para ocupar el espacio disponible */
+    z-index: 1000; /* Asegura que el menú esté por encima de otras secciones */
+}
+
+.nav-links.active {
+    display: flex; /* Muestra el menú cuando está activo */
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+.hamburger {
+    display: block; /* Muestra el botón hamburguesa en mobile */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 15%; /* Ajusta el tamaño del logo para mobile */
+}
+
+.nav-bar {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+  .banner {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .banner-content h1 {
+      font-size: 50px;
+      text-align: center;
+      margin-bottom: 0;
+  }
+
+  .banner-content p {
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 0.5em;
+  }
+
+  .banner-image {
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  .banner-image img {
+      width: 80%;
+      height: auto;
+  }
+
+  .banner::before {
+      left: -50%;
+      width: 200%;
+      transform: skew(-70deg);
+  }
+
+  /* seccion descuentos- barra busqueda- filtro */
+  .productos {
+    grid-template-columns: 1fr;
+    padding-left: 10px;
+}
+
+.producto {
+    margin-bottom: 20px;
+}
+
+.busqueda {
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.busqueda input {
+    width: 100%;
+}
+
+/* DEMAS COSAS */
+.productos-coleccion, .productos-accesorios {
+  grid-template-columns: 1fr;
+  padding-left: 10px;
+}
+
+.producto {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* FOOTER STYLE */
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-column {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.image-logo {
+  width: 70%;
+}
+
+.fab {
+  font-size: 35px;
+}
+}
+
+/* Tablet Styles (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .banner {
+      padding: 30px;
+  }
+
+  .banner-content h1 {
+      font-size: 70px;
+  }
+
+  .banner-content p {
+      font-size: 20px;
+      letter-spacing: 0.8em;
+  }
+
+  .banner-image img {
+      width: 300px;
+      height: 400px;
+  }
+
+  .banner::before {
+      left: -30%;
+      width: 190%;
+  }
+
+  /*seccion descuentos barra busqueda y mas*/
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+}
+
+.busqueda {
+    max-width: 50%;
+}
+
+/* DEMAS COSAS*/
+.productos-coleccion, .productos-accesorios {
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 20px;
+}
+/* FOOTER */
+.footer-content {
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 45%;
+  margin-bottom: 30px;
+}
+
+.footer-column:last-child {
+  width: 100%;
+}
+}

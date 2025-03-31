@@ -10,28 +10,29 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jomhuria&family=Lusitana&display=swap" rel="stylesheet">
     </head>
 <body>
-    
     <header class="marquesina">
         <div class="ticker">COMPRA AQUÍ ENVÍOS GRATIS A TODO EL PAÍS A PARTIR DE $200K. REDIME AQUÍ TU CUPÓN </div>
-
-    
       <!-- Barra de navegación -->
       <nav class="nav-bar">
         <img src="/Assets/images/Logo.png" alt="Logo Urban&Shop" class="logo-img">
         <div class="logo"></div>
-        <ul class="nav-links">
-          <li><a href="/index.html">INICIO</a></li>
-          <li><a href="/pages/nosotros.html" class="contact-button">SOBRE NOSOTROS</a></li>
-          <li><a href="/pages/tienda.html">ÚLTIMA MODA</a></li>
-          <li><a href="/pages/blog.html">BLOG</a></li>
-          <li><a href="/pages/contactanos.html">CONTÁCTANOS</a></li>
-        </ul>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/pages/nosotros.html" class="contact-button">SOBRE NOSOTROS</a></li>
+            <li><a href="/pages/tienda.html">ÚLTIMA MODA</a></li>
+            <li><a href="/pages/blog.html">BLOG</a></li>
+            <li><a href="/pages/contactanos.html">CONTÁCTANOS</a></li>
+          </ul>
        
         <div class="carrito" onclick="mostrarCarrito()">
             🛒 <span id="cart-count">0</span>
           </div>
         </nav>
-    </header>   
+    </header> 
+    
      <!-- Modal del Carrito -->
      <div id="modalCarrito" class="modal-carrito">
         <div class="contenido-carrito">
@@ -131,9 +132,10 @@
             © 2025 URBAN&SHOP COPYRIGHT
         </div>
     </footer>
-    <script src="../dist/" defer></script>
+    <script src="/.dist/nosotros.js"></script>
     <script src="/.dist/cart.js"></script>
     <script src="/.dist/detail.js"></script>
+    <script src ="/script.js"></script>
     <script src="https://kit.fontawesome.com/a0fe0f97f9.js" crossorigin="anonymous"></script>
 </body>
 </html>
