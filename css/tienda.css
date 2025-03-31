@@ -157,34 +157,154 @@
   .seccion-productos {
   padding: 20px;
   }
+  /* Estilo para el contenedor de búsqueda */
+  .busqueda {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto 20px;
+}
+
+#input-busqueda {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    outline: none;
+}
+
+body.modo-busqueda #input-busqueda {
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* Más padding para mejor espaciado */
+  border: 2px solid #0D8BB9; /* Borde azul para destacar */
+  border-radius: 2px; /* Bordes más redondeados */
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  outline: none;
+  margin-top: 5px;
+}
+body.modo-busqueda #boton-buscar {
+  right: 25px; /* Posición ajustada por el nuevo padding */
+  color: #0D8BB9; /* Color azul para coincidir con el diseño */
+  font-size: 18px; /* Tamaño ligeramente mayor */
+}
+
+
+#input-busqueda:focus {
+    border-color: #0D8BB9;
+}
+
+#boton-buscar {
+    position: absolute;
+    color: #0D8BB9;
+    right: 10px;
+    top: 55%;
+    transform: translateY(-55%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+}
+#boton-buscar:hover {
+  color: #0D8BB9;
+  background-color: rgba(13, 139, 185, 0.1); /* Fondo azul muy tenue */
+  transform: translateY(-50%) scale(1.1); /* Ligero aumento de tamaño */
+}
+
+.sugerencias {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.sugerencia-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sugerencia-item:last-child {
+    border-bottom: none;
+}
+
+.sugerencia-item:hover {
+    background-color: #f5f5f5;
+    color: #0D8BB9;
+}
+
+.sugerencia-nombre {
+    font-weight: bold;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sugerencia-categoria {
+    font-size: 12px;
+    color: #666;
+    margin-right: 10px;
+}
+
+.sugerencia-precio {
+    color: #0D8BB9;
+    font-weight: bold;
+    margin-left: auto;
+}
+/* Ocultar elementos durante la búsqueda */
+body.modo-busqueda .titulo-seccion,
+body.modo-busqueda .titulo-coleccion,
+body.modo-busqueda .titulo-accesorios,
+body.modo-busqueda .descripcion-coleccion,
+body.modo-busqueda .llamado-accion,
+body.modo-busqueda .linea-divisoria {
+    display: none !important;
+}
+
+/* Mantener siempre visible el buscador y filtros */
+.busqueda,
+.filtro-orden {
+    display: block !important;
+}
+
+/* Opcional: estilo para el modo búsqueda */
+body.modo-busqueda {
+    background-color: #000; /* Mantener fondo negro */
+}
+
+body.modo-busqueda .seccion-productos,
+body.modo-busqueda .coleccion-urbana,
+body.modo-busqueda .accesorios-reciclados {
+    padding-top: 0;
+    margin-top: 0;
+    background-image: none !important;
+}
+
+body.modo-busqueda .producto {
+  margin-bottom: 40%;
+  flex: 0 0 calc(23.333% - 20px); /* 3 columnas con gap */
+  max-width: 280px; /* Ancho máximo para cada card */
+  
+}
     
-    /* Buscador */
-    .busqueda {
-      position: relative;
-      max-width: 300px;
-      margin: 0 auto 10px auto;
-      
-    }
-    
-    .busqueda input {
-      width: 88%;
-      padding: 10px 35px 10px 10px;
-      border: none;
-      border-radius: 4px;
-      font-size: 1em;
-      background-color: #fff;
-      color: #000;
-    }
-    
-    .icono-lupa {
-      position: absolute;
-      right: 0px;
-      top: 50%;
-      transform: translateY(-60%);
-      color: #000;
-      font-size: 1.2em;
-      pointer-events: none;
-    }
     
     /* Filtro de ordenamiento */
     .filtro-orden {

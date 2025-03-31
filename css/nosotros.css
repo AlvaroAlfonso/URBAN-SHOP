@@ -647,13 +647,17 @@ footer .footer-column a {
 }
 
 .banner-content h1 {
-    font-size: 50px;
-    text-align: center;
+  font-family: 'Jomhuria', cursive;
+  font-size: 120px;
+  font-weight: 100;
+  margin-bottom: -20px;
 }
 
 .banner-content p {
-    font-size: 18px;
-    letter-spacing: 0.5em;
+    font-family: 'Lusitana', serif;
+    font-size: 25px;
+    letter-spacing: 30px;
+    text-align: end;
 }
 
 .banner-image {

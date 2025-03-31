@@ -251,6 +251,41 @@ border-radius: 4px;
   gap: 10px; /* Espacio entre los botones */
   margin-top: 10px;
 }
+/* Estilos para los breadcrumbs */
+.breadcrumbs {
+  background-color: #000; /* Fondo claro */
+  padding: 10px 0; /* Espaciado vertical */
+  font-size: 14px; /* Tamaño de fuente */
+  color: #fff; /* Color de texto */
+  margin-bottom: 20px; /* Espacio abajo */
+  border-bottom: 1px solid #ddd; /* Línea divisoria inferior */
+}
+
+.breadcrumbs .container {
+  max-width: 1200px; /* Tamaño máximo de contenedor */
+  margin: 0 auto; /* Centrar */
+  padding: 0 20px; /* Espaciado interno */
+}
+
+.breadcrumbs a {
+  color: #ffffff; /* Azul para los enlaces */
+  text-decoration: none; /* Quitar subrayado */
+  transition: color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.breadcrumbs a:hover {
+  color: #075F7C; /* Color más oscuro al pasar el mouse */
+}
+
+.breadcrumbs span {
+  color: #0D8BB9; /* Color gris para el último elemento */
+  font-weight: bold; /* Resaltar el último elemento */
+}
+
+/* Para asegurar que los breadcrumbs se alineen correctamente */
+.breadcrumbs a + span {
+  padding-left: 10px; /* Separación entre los elementos */
+}
 
 /* Estilo para el botón de vista */
 .btn-vista {

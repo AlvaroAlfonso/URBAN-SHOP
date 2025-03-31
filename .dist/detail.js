@@ -22,10 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('color').textContent = producto.color;
                 document.getElementById('origen').textContent = producto.origen;
 
+                // Actualizar los breadcrumbs con el nombre del producto
+                actualizarBreadcrumbs(producto.nombre);
+
                 // Botón de "Compra rápida"
                 document.getElementById('btn-mercadopago').addEventListener('click', function () {
                     iniciarPagoMercadoPago(producto);
                 });
+
                 // Agregar al carrito
                 document.getElementById('btn-agregar-carrito').addEventListener('click', function () {
                     agregarAlCarrito(producto);
@@ -43,6 +47,21 @@ document.addEventListener('DOMContentLoaded', function () {
 // Función para obtener un producto por ID
 function getProductoById(productos, id) {
     return productos.find(producto => producto.id == id);
+}
+
+// Función para actualizar los breadcrumbs con el nombre del producto
+function actualizarBreadcrumbs(nombreProducto) {
+    // Asumiendo que tenemos una estructura de breadcrumbs en el HTML
+    const breadcrumbsContainer = document.querySelector('.breadcrumbs .container');
+
+    // Actualizar los breadcrumbs con el nombre del producto
+    const breadcrumbsHTML = `
+        <a href="/index.html">Inicio</a> &gt;
+        <a href="/pages/tienda.html">Última Moda</a> &gt;
+        <span>${nombreProducto}</span>
+    `;
+
+    breadcrumbsContainer.innerHTML = breadcrumbsHTML; // Reemplazar el contenido de los breadcrumbs
 }
 
 // Función para iniciar el pago con Mercado Pago

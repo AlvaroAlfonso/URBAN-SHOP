@@ -68,7 +68,7 @@
   </section>
   <section class="banner">
     <div class="banner-content">
-        <h1>MODA QUE TRANSFORMA,<br>HISTORIAS QUE INSPIRAN.</h1>
+        <h1>MODA QUE TRANSFORMA</h1>
         <p>URBAN & SHOP</p>
     </div>
     <div class="banner-image">
@@ -81,9 +81,14 @@
     
     <!-- Barra de búsqueda -->
 <div class="busqueda">
-    <input type="text" placeholder="Buscar...">
-    <span class="icono-lupa">🔍</span>
-  </div>
+  <input type="text" id="input-busqueda" placeholder="Buscar...">
+  <button id="boton-buscar" class="icono-lupa" aria-label="Buscar">
+  <i class="fas fa-search"></i>
+  </button>
+  <div id="sugerencias-busqueda" class="sugerencias"></div>
+
+</div>
+
   
   
     <!-- Filtro de ordenamiento -->
@@ -602,5 +607,7 @@
 <script src="/.dist/detail.js"></script>
 
 <script src ="/.dist/hamburger.js"></script>
+<script src="/.dist/search.js"></script>
+<script src="/.dist/breadcrumb.js"></script>
 </body>
 </html>
