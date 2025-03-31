@@ -21,6 +21,15 @@ body {
     position: relative;
     letter-spacing: 2px;
   }
+  /* Estilos para el botón hamburguesa */
+.hamburger {
+  display: none; /* Oculto en pantallas grandes */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
  
   .ticker {
     display: inline-block;
@@ -667,31 +676,34 @@ footer .footer-column a {
 
 @media (max-width: 768px) {
   .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: #000;
-      position: absolute;
-      top: 60px; /* Ajusta según la altura del nav-bar */
-      left: 0;
-      text-align: center;
-  }
+    display: none; /* Oculta el menú en mobile */
+    flex-direction: column;
+    background-color: #000;
+    position: static;
+    top: 60px; /* Ajusta según la altura de tu barra de navegación */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    flex-grow: 1; /* Permite que el menú crezca para ocupar el espacio disponible */
+    z-index: 1000; 
+}
 
-  .nav-links.active {
-      display: flex;
-  }
 
-  .nav-links li {
-      padding: 15px 0;
-  }
-
-  .menu-toggle {
-      display: flex;
-  }
-
-  .logo-img {
-      width: 15%; /* Ajusta el tamaño del logo para mobile */
-  }
+.nav-links.active {
+    display: flex; /* Muestra el menú cuando está activo */
+}
+.nav-links li {
+    margin: 15px 0;
+}
+.hamburger {
+    display: block; /* Muestra el botón hamburguesa en mobile */
+}
+.logo-img {
+    width: 15%; /* Ajusta el tamaño del logo para mobile */
+}
+.nav-bar {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
 
   /* estilos banner */
   .banner {

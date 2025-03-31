@@ -29,7 +29,10 @@
   <nav class="nav-bar">
     <img src="/Assets/images/Logo.png" alt="Logo Urban&Shop" class="logo-img">
     <div class="logo"></div>
-    <ul class="nav-links">
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+  </button>
+   <ul class="nav-links" >
       <li><a href="/index.html">INICIO</a></li>
       <li><a href="/pages/nosotros.html">SOBRE NOSOTROS</a></li>
       <li><a href="/pages/tienda.html"class="contact-button">ÚLTIMA MODA</a></li>
@@ -40,9 +43,7 @@
     <div class="carrito" onclick="mostrarCarrito()">
         🛒 <span id="cart-count">0</span>
       </div>
-    <button class="hamburger" id="hamburger-button">
-        ☰ 
-    </button>
+    
     </nav>
   </header>
     
@@ -597,8 +598,9 @@
 
 <!-- Enlace al archivo JavaScript -->
 <script src="/.dist/cart.js"></script>
-<script src="/script.js"></script>
+
 <script src="/.dist/detail.js"></script>
-<script src ="/.dist/tienda.js"></script>
+
+<script src ="/.dist/hamburger.js"></script>
 </body>
 </html>

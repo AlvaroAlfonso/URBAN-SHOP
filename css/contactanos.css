@@ -587,32 +587,34 @@ footer {
 /* Responsive para mobile */
 @media (max-width: 768px) {
   .nav-links {
-      display: none;
-      flex-direction: column;
-      background-color: #000;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      z-index: 10;
-  }
+    display: none; /* Oculta el menú en mobile */
+    flex-direction: column;
+    background-color: #000;
+    position: static;
+    top: 60px; /* Ajusta según la altura de tu barra de navegación */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    flex-grow: 1; /* Permite que el menú crezca para ocupar el espacio disponible */
+    z-index: 1000; 
+}
 
-  .nav-links.active {
-      display: flex;
-  }
 
-  .nav-links li {
-      padding: 15px 0;
-  }
-
-  .hamburger {
-      display: block;
-  }
-
-  .logo-img {
-    width: 15%;
-  }
+.nav-links.active {
+    display: flex; /* Muestra el menú cuando está activo */
+}
+.nav-links li {
+    margin: 15px 0;
+}
+.hamburger {
+    display: block; /* Muestra el botón hamburguesa en mobile */
+}
+.logo-img {
+    width: 15%; /* Ajusta el tamaño del logo para mobile */
+}
+.nav-bar {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
 }
 
 /* Media Queries */

@@ -339,7 +339,7 @@ body {
     display: flex;
     text-align: center;
     width: 50%;
-    background-image: url('/images/fondo-metal.png');
+    background-image: url('/Assets/images/fondo-metal.png');
     background-color: rgba(0, 0, 0, 0.836);
     padding: 20px;
     box-sizing: border-box;
@@ -579,12 +579,12 @@ body {
 }
 
 /* Fondos de las tarjetas (reemplaza con tus imágenes) */
-.card1 { background-image: url('/images/model1.png'); }
-.card2 { background-image: url('/images/model2.png'); }
-.card3 { background-image: url('/images/model3.png'); }
-.card4 { background-image: url('/images/model4.png'); }
-.card5 { background-image: url('/images/model5.png'); }
-.card6 { background-image: url('/images/model6.png'); }
+.card1 { background-image: url('/Assets/images/model1.png'); }
+.card2 { background-image: url('/Assets/images/model2.png'); }
+.card3 { background-image: url('/Assets/images/model3.png'); }
+.card4 { background-image: url('/Assets/images/model4.png'); }
+.card5 { background-image: url('/Assets/images/model5.png'); }
+.card6 { background-image: url('/Assets/images/model6.png'); }
 
 /* estilos contactanos formulario */
 
@@ -604,7 +604,7 @@ body {
     display: flex;
     text-align: center;
     width: 40%;
-    background-image: url('/images/imagen-robot-fondo.png'); /* Reemplaza con tu imagen */
+    background-image: url('/Assets/images/imagen-robot-fondo.png'); /* Reemplaza con tu imagen */
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
