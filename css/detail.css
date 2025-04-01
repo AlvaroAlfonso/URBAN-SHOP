@@ -1,3 +1,22 @@
+:root {
+  --color-principal: #0D8BB9;
+  --color-secundario: #3399CC; 
+  --color-hover: #1976D2; 
+  --color-fondo: #000000; 
+  --color-texto: #FFFFFF; 
+
+  /*Accesibilidad*/
+
+  --color-principal: #17b6eb; 
+  --color-secundario: #00fff2;
+  --color-resaltado: #FFD700; 
+  --color-banner: #00ff08; 
+  --color-opcional: #c8ff00; 
+  --color-letra: #0400ff;
+  --color-border: #09ff00;
+  --color-botton: #ff00ea;
+
+}
 *{
   padding: 0%;
   margin:0%;
