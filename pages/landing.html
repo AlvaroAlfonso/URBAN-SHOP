@@ -15,12 +15,12 @@
       <!-- Barra de navegación -->
       <nav class="nav-bar">
         <img src="../Assets/images/Logo.png" alt="Logo Urban&Shop" class="logo-img">
-        <div class="logo"></div>
+        <div class="logo">     </div>
         <button class="hamburger" id="hamburger">
           <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links">
-          <li><a href="/index.html" class="contact-button">INICIO</a></li>
+      </button>
+        <ul class="nav-links"  id="nav-links">
+          <li><a href="/index.html">INICIO</a></li>
           <li><a href="../pages/nosotros.html">SOBRE NOSOTROS</a></li>
           <li><a href="../pages/tienda.html">ÚLTIMA MODA</a></li>
           <li><a href="../pages/blog.html">BLOG</a></li>
@@ -34,9 +34,6 @@
             <button id="increase-font">A+</button>
             <button id="decrease-font">A-</button>
             <button id="toggle-contrast"><i class="fa-solid fa-circle-half-stroke"></i></button>
-        </div>
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
         </div>
         </nav>
     </header>
@@ -55,6 +52,14 @@
       </div>
     </div>
     <div class="overlay"></div>
+    <section class="breadcrumbs">
+      <div class="container">
+        <a href="/index.html">Inicio</a> &gt; 
+        <a href="/pages/tienda.html">Última Moda</a> &gt; 
+        <a href="/pages/landing.html">Landing Page</a> &gt; 
+        <span id="producto-nombre"></span> <!-- Aquí se pondrá el nombre del producto -->
+      </div>
+    </section>
     <div class="titulo-landing">
       <h1>¡Transforma tu estilo con <span class="highlight">REBEL DÉCADAS</span>!</h1>
     </div>
@@ -69,14 +74,14 @@
               "REBEL DÉCADAS". El futuro de la moda está aquí con este diseño único. ¡Destaca y marca 
               tendencia con la combinación perfecta de estilo vanguardista y detalles desgastados!</p>
 
-            <h2> 🔥 ¿Por qué elegir <span class="highlight">REBEL DÉCADAS?</span>🔥</h2>
+            <h2>¿Por qué elegir <span class="highlight">REBEL DÉCADAS?</span></h2>
             <div class="caracteristicas-landing">
                 <p><strong>Estilo único: </strong>Confeccionado con un cropped de tela marrón que resalta tu figura y unos pantalones de mezclilla desgastados con cortes y detalles que captan todas las miradas.</p>
                 <p> <strong>Versatilidad: </strong>Perfecto para ocasiones informales o para añadir un toque inesperado a tu outfit de noche. ¡Estarás lista para destacar en cualquier lugar!</p>
                 <p><strong>Comodidad y calidad: </strong>La mezcla perfecta entre denim de alta calidad y un diseño que sigue las últimas tendencias de la moda, creando una sensación de libertad y originalidad.</p>
                 <p><strong>Transformación asegurada: </strong>Transformación asegurada: No solo es ropa, es una declaración de estilo. ¡Sé el centro de todas las miradas y deja que tu estilo hable por ti!</p>
             </div>
-            <button class="products-button">Ir a ver los productos</button>
+            <button class="products-button " onclick="window.location.href='/pages/blog.html'" >Ir a ver los productos</button>
         </section>
     </main>
     <section class="contenedor-slider">
@@ -140,5 +145,8 @@
     <script src="/.dist/landing.js"></script>
     <script src="/.dist/accesibility.js"></script>
     <script src="https://kit.fontawesome.com/a0fe0f97f9.js" crossorigin="anonymous"></script>
+    <script src="/.dist/cart.js"></script>
+    <script src="/.dist/detail.js"></script>
+    <script src ="/.dist/hamburger.js"></script>
 </body>
 </html>

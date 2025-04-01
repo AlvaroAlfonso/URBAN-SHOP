@@ -44,7 +44,7 @@ body {
     position: relative;
     letter-spacing: 2px;
   }
-  * Estilos para el botón hamburguesa */
+  /* Estilos para el botón hamburguesa */
 .hamburger {
     display: none; /* Oculto en pantallas grandes */
     background: none;
@@ -52,7 +52,45 @@ body {
     font-size: 24px;
     color: white;
     cursor: pointer;
+    
 }
+
+/* Estilos para los breadcrumbs */
+.breadcrumbs {
+  background-color: #000; /* Fondo claro */
+  padding: 10px 0; /* Espaciado vertical */
+  font-size: 14px; /* Tamaño de fuente */
+  color: #fff; /* Color de texto */
+  margin-bottom: 20px; /* Espacio abajo */
+  border-bottom: 1px solid #ddd; /* Línea divisoria inferior */
+}
+
+.breadcrumbs .container {
+  max-width: 1200px; /* Tamaño máximo de contenedor */
+  margin: 0 auto; /* Centrar */
+  padding: 0 20px; /* Espaciado interno */
+}
+
+.breadcrumbs a {
+  color: #ffffff; /* Azul para los enlaces */
+  text-decoration: none; /* Quitar subrayado */
+  transition: color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.breadcrumbs a:hover {
+  color: #075F7C; /* Color más oscuro al pasar el mouse */
+}
+
+.breadcrumbs span {
+  color: #0D8BB9; /* Color gris para el último elemento */
+  font-weight: bold; /* Resaltar el último elemento */
+}
+
+/* Para asegurar que los breadcrumbs se alineen correctamente */
+.breadcrumbs a + span {
+  padding-left: 10px; /* Separación entre los elementos */
+}
+
  
   .ticker {
     display: inline-block;
@@ -405,6 +443,8 @@ border-radius: 4px;
 }
 .image-fondo{
   text-align: center;
+  background-color: #ffffff;
+  padding-bottom: 30px;
 }
 
 .titulo-landing h1{
@@ -417,12 +457,13 @@ border-radius: 4px;
 
 }
 .highlight {
-  color: #0D8BB9;
+  color: #ffffff;
   font-weight: bold;
 }
 
 .right-section{
   padding: 30px;
+  background-color: #0a7ba3;
 }
 
 .right-section p{
