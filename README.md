@@ -10,6 +10,6 @@
 
 <h1>construimos de cero la instancia</h1>
 
-![Uploading image.png…]()
+![Texto alternativo](aquí_va_el_enlace_o_ruta_de_la_imagen)
 
 
